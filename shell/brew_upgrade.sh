@@ -1,49 +1,44 @@
-#!/bin/zsh
+#!/usr/bin/env zsh -l
 
-update_version_regex="Upgrading (.*)\s(\S*\s->\s\S.*)"
-update_successful_regex="(.*)\swas successfully upgraded"
+# update_version_regex="Upgrading\s(.*)\s(\S*\s->\s\S.*)"
+update_version_regex="(\S+)\s(\S*\s->\s\S.*)"
+update_successful_regex="(.*)\swas\ssuccessfully\supgraded"
 
-OUTPUT_MOCK="Upgrading RandomApp 1.0.1 -> 1.0.2
-blablabla
-RandomApp was successfully upgraded!
-blablabla
-Upgrading ImportantApp 3.1 -> 3.2
-blablabla
-ImportantApp was successfully upgraded!
-blablabla
-Upgrading WillFailApp 0.1 -> 0.2
-blablabla
-WillFailApp update failed!
-"
+# source /etc/profile
 
-OUTPUT=`brew upgrade` 2>&1 | tee brew_upgrade.tmp
-# echo "$OUTPUT" > brew_upgrade.tmp
+date=`date +'%Y-%m-%d_%H-%M'`
+touch /Users/arnewohletz/MyDevelopmentProjects/scripts/shell/brew_upgrade_$date.tmp
+tmp_file=/Users/arnewohletz/MyDevelopmentProjects/scripts/shell/brew_upgrade_$date.tmp
+script -q $tmp_file brew upgrade >/dev/null
 
-match=$(pcregrep -o1 $update_version_regex brew_upgrade.tmp)
+match=$(pcregrep -o1 $update_version_regex $tmp_file)
 UPGRADE_APPS=($(echo $match))
 
-match=$(pcregrep -o1 -o2 --om-separator=' ' $update_version_regex brew_upgrade.tmp)
+match=$(pcregrep -o1 -o2 --om-separator=' ' $update_version_regex $tmp_file)
 UPGRADE_APP_MESSAGES=($(echo $match | tr " " "_"))
 
-match=($(pcregrep -o1 $update_successful_regex brew_upgrade.tmp))
-UPGRADE_APP_SUCCESSFUL=($(echo $match))
+# match=($(pcregrep -o1 $update_successful_regex $tmp_file))
+# UPGRADE_APP_SUCCESSFUL=($(echo $match))
 
 ITER=1
 msg=""
 
 for val in "${UPGRADE_APPS[@]}"
 do
-  if [[ $UPGRADE_APP_SUCCESSFUL[$ITER] = $UPGRADE_APPS[$ITER] ]]
-  then
-    msg+="$(echo $UPGRADE_APP_MESSAGES[$ITER] | tr "_" " ")"
-  else
-    msg+="$(echo "FAILED UPDATE:" $UPGRADE_APPS[$ITER] | tr "_" " ")"
-  msg+="; "
-  fi
+  msg+="$(echo $UPGRADE_APP_MESSAGES[$ITER] | tr "_" " ")"
+  # if [[ $UPGRADE_APP_SUCCESSFUL[$ITER] = $UPGRADE_APPS[$ITER] ]]
+  # then
+  #   msg+="$(echo $UPGRADE_APP_MESSAGES[$ITER] | tr "_" " ")"
+  # else
+  #   msg+="$(echo "FAILED UPDATE:" $UPGRADE_APPS[$ITER] | tr "_" " ")"
+  # msg+=";"
+  # fi
 ((ITER++))
 done
 
 if [[ ! -z $msg ]]
 then
   noti -t "Package(s) updated" -m "$msg"
+# else
+#   say "I did not hit her, it's not true! It's bullshit! I did not hit her! I did not. Oh hi, Mark."
 fi
