@@ -2,49 +2,42 @@ from ast import Add
 import os
 from typing import Type
 
+
 is_gameplay = True
 is_mappack = True
 is_weapons = True
 
-root_dir = "~/Library/Application Support/gzdoom/"
+root_dir = "~/Library/Application\ Support/gzdoom/"
 
 
-# class EmptyInputError(Exception):
-#     """No input given"""
+class EmptyInputError(Exception):
+    """No input given"""
 
 
 class Addon:
+    name = ""
     allows_other_addons = False
     iwads = ()
     files = ()
-
-    def __init__(self, name, files, version=None, url=None):
-        self.name = name
-        self.files = files
-        self.version = version
-        self.url = url
+    pass
 
 
 class Launcher:
-    """
-    Generates the command
-    """
-
     def __init__(self):
         self.allows_more_current_type = False
         self.contains_weapons = False
-        self.allowed_map_packs = self.get_sorted_addons(VersatileMapPack)
-        self.total_conversions = self.get_sorted_addons(TotalConversion)
-        self.predefined_combinations = self.get_sorted_addons(
-            PredefinedCombination)
-        self.gameplay_addons = self.get_sorted_addons(Gameplay)
-        self.weapons_addons = self.get_sorted_addons(WeaponPack)
-        self.map_packs = self.get_sorted_addons(MapPack)
+        self.allowed_map_packs = self.get_sorted_tuple_addons(VersatileMapPack)
         self.command = "/Applications/GZDoom.app/Contents/MacOS/gzdoom"
         print("Welcome to GZDoom Launcher!")
+        self.total_conversions = self.get_sorted_tuple_addons(TotalConversion)
+        self.predefined_combinations = self.get_sorted_tuple_addons(
+            PredefinedCombination)
+        self.gameplay_addons = self.get_sorted_tuple_addons(Gameplay)
+        self.weapons_addons = self.get_sorted_tuple_addons(WeaponPack)
+        self.map_packs = self.get_sorted_tuple_addons(MapPack)
 
-    def get_sorted_addons(self, class_type: Type[Addon]) -> tuple:
-        addons_tuple = [cls() for cls in class_type.__subclasses__()]
+    def get_sorted_tuple_addons(self, class_type: Type[Addon]):
+        addons_tuple = [cls()for cls in class_type.__subclasses__()]
         return tuple(sorted(addons_tuple, key=lambda x: x.name))
 
     def prompt_addon(self, text, default):
@@ -72,7 +65,7 @@ class Launcher:
             for file in addon.files:
                 self.command += f" -file {root_dir + file}"
             if hasattr(addon, "allowed_map_types"):
-                self.allowed_map_packs = self.get_sorted_addons(
+                self.allowed_map_packs = self.get_sorted_tuple_addons(
                     addon.allowed_map_types)
             if last_input:
                 self.launch()
@@ -87,6 +80,7 @@ class Launcher:
 class AutonomousAddon(Addon):
     allows_more_current_type = False
     contains_weapons = True
+    pass
 
 
 class ExtendingAddon(Addon):
@@ -97,12 +91,6 @@ class ExtendingAddon(Addon):
 class TotalConversion(AutonomousAddon):
     type = "Total Conversion"
     iwads = ("doom2.wad",)
-
-    def __init__(self, name, files, version=None, url=None):
-        self.name = name
-        self.files = files
-        self.version = version
-        self.url = url
 
 
 class PredefinedCombination(AutonomousAddon):
@@ -117,7 +105,7 @@ class Gameplay(ExtendingAddon):
     contains_weapons = False
 
     def get_allowed_map_packs(self, class_type):
-        addons_tuple = [cls() for cls in class_type.__subclasses__()]
+        addons_tuple = [cls()for cls in class_type.__subclasses__()]
         return tuple(sorted(addons_tuple, key=lambda x: x.name))
 
 
@@ -138,7 +126,8 @@ class VersatileMapPack(MapPack):
 
 class AshesEpisode1(TotalConversion):
     name = "Ashes Episode 1 - 2063"
-    version = "2.23"
+    version = "2.3"
+    url = "https://www.moddb.com/mods/ashes-2063"
     files = ("ashes/AshesSAMenu.pk3",
              "ashes/Ashes2063Enriched2_23.pk3",
              "ashes/Ashes2063EnrichedFDPatch.pk3")
@@ -147,6 +136,7 @@ class AshesEpisode1(TotalConversion):
 class AshesEpisode2(TotalConversion):
     name = "Ashes Episode 2 - Afterglow"
     version = "1.10"
+    url = "https://www.moddb.com/mods/ashes-2063"
     files = ("ashes/AshesSAMenu.pk3",
              "ashes/AshesAfterglow1_10.pk3")
 
@@ -154,20 +144,24 @@ class AshesEpisode2(TotalConversion):
 class Asterodead(TotalConversion):
     name = "Asterodead"
     version = "20220924"
+    url = "https://www.moddb.com/mods/asterodead"
     files = ("ASTERODEAD_V20220924.pk3",)
 
 
 class BladeOfAgony(TotalConversion):
     name = "Blade Of Agony"
     version = "3.1"
-    iwads = ("boa.ipk3",)
+    url = "https://www.moddb.com/mods/wolfendoom-blade-of-agony"
+    # iwads = ("boa.ipk3",)
+    iwads = ("WolfenDoom-master.zip",)
 
 
 class BrutalDoom64(TotalConversion):
     name = "Brutal Doom 64"
     version = "2.5"
-    files = ("Brutal_Doom_64_v2.5_u30.12/bd64game_v2.5.pk3",
-             "Brutal_Doom_64_v2.5_u30.12/bd64maps_v2.5.pk3")
+    url = "https://www.moddb.com/mods/brutal-doom-64"
+    files = ("Brutal_Doom_64/bd64game_v2.5.pk3",
+             "Brutal_Doom_64/bd64maps_v2.5.pk3")
 
 
 class BrutalHeretic(TotalConversion):
@@ -196,38 +190,44 @@ class BrutalHexen(TotalConversion):
 class BrutalWolfenstein3D(TotalConversion):
     name = "Brutal Wolfenstein 3D"
     version = "6.0"
+    url = "https://www.moddb.com/mods/brutal-wolfenstein-3d"
     files = ("ZMC-BW6.0.pk3",)
 
 
 class Doom64Retribution(TotalConversion):
     name = "Doom 64 - Retribution"
     version = "1.5"
-    iwads = ()
-    files = ("D64RTRv1.5/D64RTR_v1.5.WAD",)
+    url = "https://www.moddb.com/mods/doom-64-retribution"
+    files = ("D64RTRv1.5/D64RTR_v1.5.WAD",
+             "D64RTRv1.5/D64RTR_BRIGHTMAPS.PK3")
 
 
 class GoldenSouls(TotalConversion):
     name = "Golden Souls 2"
     version = "1.4"
+    url = "https://batandy.itch.io/goldensouls2"
     files = ("GoldenSouls2_1.4.pk3",)
 
 
 class Pirate(TotalConversion):
-    name = "PirateDoom"
+    name = "Pirate Doom"
     version = "1.8.5"
+    url = "https://www.moddb.com/mods/pirate-doom/downloads"
     files = ("Pirates.wad",)
 
 
 class TotalChaos(TotalConversion):
     name = "Total Chaos"
     version = "1.40"
+    url = "https://www.moddb.com/mods/total-chaos"
     files = ("total_chaos/totalchaos.pk3",
              "total_chaos/zd_extra.pk3 +set gl_precache 1")
 
 
 class WolfensteinX(TotalConversion):
-    name = "Wolfenstein X"
+    name = "Wolfenstein X: Hearts of Liberty"
     version = "Final"
+    url = "https://www.moddb.com/downloads/wolfenstein-x-hearts-of-liberty-final-edition-complete-edition"
     files = ("WolfensteinX_HeartsOfLibertyFinalEditionFix/WolfX_v2.pk3",
              "WolfensteinX_HeartsOfLibertyFinalEditionFix/WolfX_heartsofliberty-finaledition-fix.pk3")
 
@@ -245,22 +245,21 @@ class HexenHD(PredefinedCombination):
 
 
 class BrutalDoom(Gameplay):
-    name = "Brutal Doom (CE)"
-    version = "21.12.3"
+    name = "Brutal Doom (Community Expansion)"
+    version = "21.13.0"
     url = "https://github.com/BLOODWOLF333/Brutal-Doom-Community-Expansion"
     allows_more_current_type = True
-    files = ("brutalv21.12.3HF.pk3",)
+    files = ("brutalv21.13.0.pk3",)
 
 
 class BrutalDoomExtendedEdition(Gameplay):
     name = "Brutal Doom Extended Edition"
-    version = "9.0"
+    version = "9.2"
     url = "https://www.moddb.com/mods/brutal-doom-extended-edition"
     allows_more_current_type = True
-    files = (
-        "Brutal_Doom_Extended_Edition_v9.0/Brutal_Doom_Extended_Edition.pk3",
-        "Brutal_Doom_Extended_Edition_Community_Weapons_Pack.pk3",
-        "Brutal_Doom_Extended_Edition_HXRTC_Hud.pk3")
+    files = ("Brutal_Doom_Extended_Edition/Brutal_Doom_Extended_Edition.pk3",
+             "Brutal_Doom_Extended_Edition/Brutal_Doom_Extended_Edition_Community_Weapons_Pack.pk3",
+             "Brutal_Doom_Extended_Edition/Brutal_Doom_Extended_Edition_HXRTC_Hud.pk3")
 
 
 class BrutalTrailblazer(Gameplay):
@@ -270,7 +269,7 @@ class BrutalTrailblazer(Gameplay):
     contains_weapons = True
     files = ("Brutal_Trailblazer_1.5e/bd21monstersonlyfix.pk3",
              "Brutal_Trailblazer_1.5e/Trailblazer.pk3",
-             "Brutal_Trailblazer_1.5e/Brutal Trailblazer Patch v1.5e.pk3")
+             "Brutal_Trailblazer_1.5e/Brutal_Trailblazer_Patch_v15e.pk3")
 
 
 class DarkForcesMusic(Gameplay):
@@ -279,14 +278,15 @@ class DarkForcesMusic(Gameplay):
     url = "https://www.moddb.com/downloads/dark-forces-music-patch"
     allows_more_current_type = True
     allows_brutal_doom = True
-    files = ("DarkForcesMusicX.pk3",)
+    files = ("music/DarkForcesMusicX.pk3",)
 
 
 class DN3Doom(Gameplay):
     name = "DN3Doom (Duke Nukem Style)"
+    version = "1.07b"
+    url = "https://www.moddb.com/mods/dn3doom"
     allowed_map_packs = []
     contains_weapons = True
-    version = "1.07b"
     files = ("DN3DoomDuke_Nukem3D_FullMusics.wad",
              "DN3Doom/Duke_Music_and_Textures.pk3",
              "DN3Doom/Duke_SiN_mod.zip",
@@ -299,7 +299,8 @@ class DN3Doom(Gameplay):
 
 class DoomEnhanced(Gameplay):
     name = "Doom Enhanced"
-    version = ""
+    version = "Aug 15th, 2022"
+    url = "https://www.moddb.com/mods/doom-enhancement-project/addons"
     allows_more_current_type = True
     allows_brutal_doom = True
     files = ("doom_enhanced/CustomSounds.pk3",
@@ -311,6 +312,7 @@ class DoomEnhanced(Gameplay):
 class HighQualityPSXMusic(Gameplay):
     name = "High Quality PSX Music (Slow, Gloomy)"
     version = "Jun 9th, 2015"
+    url = "https://www.moddb.com/games/doom-ii/addons/psx-soundtrack-replacement-high-quality"
     allows_more_current_type = True
     allows_brutal_doom = True
     files = ("music/HQPSXMUS.WAD",)
@@ -319,6 +321,7 @@ class HighQualityPSXMusic(Gameplay):
 class LambdaStrike(Gameplay):
     name = "Lambda Strike"
     version = "1.0.5"
+    url = "https://www.moddb.com/mods/lambda-strike"
     contains_weapons = True
     files = ("Lambda-Strike1_0_5/Lambda-Strike_Resources.pk3",
              "Lambda-Strike1_0_5/Lambda-Strike_Code.pk3",
@@ -327,7 +330,7 @@ class LambdaStrike(Gameplay):
 
 class MapsOfChaosOverkill(Gameplay):
     name = "Maps Of Chaos - Overkill"
-    version = ""
+    version = "https://www.moddb.com/mods/brutal-doom/addons/brutalized-doom-and-doom-ii/page/8"
     allows_more_current_type = True
     files = ("mapsofchaos-ok.wad",)
 
@@ -335,6 +338,7 @@ class MapsOfChaosOverkill(Gameplay):
 class PainkillerMutilation(Gameplay):
     name = "Painkiller Mutilator (Enemies & Weapons)"
     version = "1.7"
+    url = "https://www.moddb.com/mods/painkiller-for-doom"
     contains_weapons = True
     files = ("painkiller_mutilator/Painkiller_Monsters.pk3",
              "painkiller_mutilator/Painkiller_Weapons_3D.pk3")
@@ -352,17 +356,20 @@ class ProjectBrutality(Gameplay):
 class VoxelDoom(Gameplay):
     name = "Voxel Doom"
     version = "1.0"
+    url = "https://www.moddb.com/mods/doom-voxel-project"
     allowed_map_packs = []
     contains_weapons = True
     files = ("cheello_voxels.zip",)
 
 
 class WoomyProjectPetersen(Gameplay):
-    name = "Woomy: Project Petersen (includes "
+    name = "Woomy: Project Petersen"
     version = "2.7"
+    url = "https://www.moddb.com/mods/woomy-project-petersen"
     contains_weapons = True
-    files = ("WOOMY_Project_Petersen.pk3",
-             "Meat_Grinder_Enemies.pk3")
+    allows_brutal_doom = False
+    files = ("woomy_project_petersen/WOOMY_Project_Petersen.pk3",
+             "woomy_project_petersen/Meat_Grinder_Enemies.pk3")
 
 
 class XimStarWarsMapPack(MapPack):
@@ -372,11 +379,11 @@ class XimStarWarsMapPack(MapPack):
 class XimStarWars(Gameplay):
     name = "Xim's Star Wars"
     version = "2.9.2"
+    url = "https://www.moddb.com/mods/xims-star-wars-doom"
     contains_weapons = True
     allowed_map_types = XimStarWarsMapPack
 
-    files = ("Xim-StarWars/Maps/DarkHour.wad",
-             "Xim-StarWars/Xim-StarWars-v2.9.2.pk3",
+    files = ("Xim-StarWars/Xim-StarWars-v2.9.2.pk3",
              "Xim-StarWars/Xim-StarWarsProps.pk3",
              "Xim-StarWars/Xim-StarWarsTextures-v2.1.pk3",
              "Xim-StarWars/Xim-StarWars-FreeMP3.pk3")
@@ -385,14 +392,23 @@ class XimStarWars(Gameplay):
 class CallOfDoomBlackWarfare(WeaponPack):
     name = "Call Of Doom - Black Warfare (Brutal Doom Version)"
     version = "2.0"
-    files = ("CODBW_FileA_Brutal_v2.pk3",
-             "CODBW_FileB_HD_v2.pk3")
+    url = "https://www.moddb.com/mods/call-of-doom-cod-style-advanced-weapons-mod"
+    files = ("call_of_doom/CODBW_FileA_Brutal_v2.pk3",
+             "call_of_doom/CODBW_FileB_HD_v2.pk3")
 
 
 class PainkillerMutilatorWeaponsOnly(WeaponPack):
     name = "Painkiller Mutilator"
     version = "1.7"
+    url = "https://www.moddb.com/mods/painkiller-for-doom"
     files = ("painkiller_mutilator/Painkiller_Weapons_3D.pk3",)
+
+
+class AshesWeaponOnly(WeaponPack):
+    name = "Ashes 2063 Weapons"
+    version = "2.23"
+    url = "https://www.moddb.com/mods/ashes-2063"
+    files = ("ashes/AshesWeaponsV2_223.pk3",)
 
 
 class Doom(VersatileMapPack):
@@ -421,10 +437,15 @@ class DragonSektorRemake(VersatileMapPack):
     url = "https://www.moddb.com/mods/dragon-sector-the-remake"
     files = ("dragon-sector-remake-v0.43.pk3",)
 
-
 class FinalDoom(VersatileMapPack):
     name = "Final Doom - TNT: Evilution"
     iwads = ("TNT.wad",)
+
+
+class HellOnEarthStarterPack(VersatileMapPack):
+    name = "Hell On Earth Starter Pack"
+    files = ("hellonearth/ExtraTextures.wad",
+             "hellonearth/hellonearthstarterpack.wad")
 
 
 class PlutoniaExperiment(VersatileMapPack):
@@ -432,18 +453,33 @@ class PlutoniaExperiment(VersatileMapPack):
     iwads = ("plutonia.wad",)
 
 
+class ReMod(VersatileMapPack):
+    name = "ReMod"
+    version = "4"
+    url = "https://www.moddb.com/mods/remod"
+    files = ("ReMod.pk3",)
+
+
 class Sigil(VersatileMapPack):
-    name = "Sigil a.k.a. Doom - Episode 5"
-    files = ("SIGIL_v1_21.wad")
+    name = "Sigil a.k.a. Doom - Episode 5 (is added)"
+    version = "1.21"
+    url = "https://romero.com/sigil"
+    files = ("SIGIL_v1_21.wad",)
     iwads = ("doom.wad",)
 
 
-# class BackToSaturnX(XimStarWarsMapPack):
-#     name = "Return To Saturn X"
-#     version = "1.1.6"
-#     url = "https://www.doomworld.com/idgames/levels/doom2/megawads/btsx_e1"
-#     files = ("Xim-StarWars/Maps/btsx_e1a.wad",
-#              "Xim-StarWars/Maps/btsx_e1b.wad")
+class UACUltra(VersatileMapPack):
+    name = "UAC Ultra"
+    version = "1.2"
+    url = "https://www.doomworld.com/idgames/levels/doom2/Ports/s-u/uacultra"
+    files = ("uacultra.wad",)
+
+
+class ValiantVaccianted(VersatileMapPack):
+    name = "Valiant: Vaccinated Edition"
+    version = "December 3rd, 2015"
+    url = "https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/valve"
+    files = ("valve.wad",)
 
 
 class DarkHour(XimStarWarsMapPack):
@@ -466,7 +502,7 @@ class SpacWars(XimStarWarsMapPack):
     version = "2015.09.01"
     url = "https://www.doomworld.com/idgames/levels/doom2/Ports/s-u/spacwars"
     files = ("Xim-StarWars/Patches/Xim-StarWarsSpacwars.pk3",
-             "Xim-StarWars/Maps/DarkHour.wad",)
+             "Xim-StarWars/Maps/spacwars.wad",)
 
 
 class StarWarsDoom2(XimStarWarsMapPack):

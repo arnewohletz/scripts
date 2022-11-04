@@ -1,7 +1,9 @@
 .git
 .idea
 */.idea
-impf_termin_tester/*
+impf_termin_tester/**
 .DS_Store
 *.log
 *.tmp
+**/build/**
+**/dist/**

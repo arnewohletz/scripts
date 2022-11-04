@@ -1,44 +1,34 @@
-#!/usr/bin/env zsh -l
+#!/bin/zsh
 
-# update_version_regex="Upgrading\s(.*)\s(\S*\s->\s\S.*)"
 update_version_regex="(\S+)\s(\S*\s->\s\S.*)"
-update_successful_regex="(.*)\swas\ssuccessfully\supgraded"
 
-# source /etc/profile
+date=$(date +'%Y-%m-%d_%H-%M')
+log_dir=${0%/*}/brew_upgrade_logs
+log_file=$log_dir/brew_upgrade_$date.log
 
-date=`date +'%Y-%m-%d_%H-%M'`
-touch /Users/arnewohletz/MyDevelopmentProjects/scripts/shell/brew_upgrade_$date.tmp
-tmp_file=/Users/arnewohletz/MyDevelopmentProjects/scripts/shell/brew_upgrade_$date.tmp
-script -q $tmp_file brew upgrade >/dev/null
+if [ ! -d "$log_dir" ]; then
+  mkdir -p "$log_dir"
+fi
 
-match=$(pcregrep -o1 $update_version_regex $tmp_file)
+touch "$log_file"
+/usr/local/bin/brew upgrade >"$log_file" 2>&1
+
+match=$(/usr/local/bin/pcregrep -o1 "$update_version_regex" "$log_file")
 UPGRADE_APPS=($(echo $match))
 
-match=$(pcregrep -o1 -o2 --om-separator=' ' $update_version_regex $tmp_file)
+match=$(/usr/local/bin/pcregrep -o1 -o2 --om-separator=' ' "$update_version_regex" "$log_file")
 UPGRADE_APP_MESSAGES=($(echo $match | tr " " "_"))
-
-# match=($(pcregrep -o1 $update_successful_regex $tmp_file))
-# UPGRADE_APP_SUCCESSFUL=($(echo $match))
 
 ITER=1
 msg=""
 
-for val in "${UPGRADE_APPS[@]}"
-do
+for val in "${UPGRADE_APPS[@]}"; do
   msg+="$(echo $UPGRADE_APP_MESSAGES[$ITER] | tr "_" " ")"
-  # if [[ $UPGRADE_APP_SUCCESSFUL[$ITER] = $UPGRADE_APPS[$ITER] ]]
-  # then
-  #   msg+="$(echo $UPGRADE_APP_MESSAGES[$ITER] | tr "_" " ")"
-  # else
-  #   msg+="$(echo "FAILED UPDATE:" $UPGRADE_APPS[$ITER] | tr "_" " ")"
-  # msg+=";"
-  # fi
-((ITER++))
+  ((ITER++))
 done
 
-if [[ ! -z $msg ]]
-then
-  noti -t "Package(s) updated" -m "$msg"
-# else
-#   say "I did not hit her, it's not true! It's bullshit! I did not hit her! I did not. Oh hi, Mark."
+if [[ -n $msg ]]; then
+  /usr/local/bin/noti -t "Package(s) updated" -m "$msg"
 fi
+
+
