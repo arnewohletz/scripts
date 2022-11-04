@@ -1,0 +1,17 @@
+#!/usr/bin/ruby
+require 'open3'
+require 'tempfile'
+require 'json'
+out = Tempfile.new('p0d')
+stdin, stdout, stderr, wait_thr = Open3.popen3("p0d", "-d", "3", "-O", out.path, "https://duckduckgo.com/")
+stdin.close
+if wait_thr.value.exitstatus != 0
+    puts stderr.read
+    exit
+end
+out.rewind
+data = JSON.parse(out.read)
+printf("Internet Speed:\n")
+os = data[0]["OS"]
+printf("Download: %d mbits/sec\n", os['InetDlSpeedMBits'].to_i);
+printf("Upload:   %d mbits/sec\n", os['InetUlSpeedMBits'].to_i);
