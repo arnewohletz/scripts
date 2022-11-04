@@ -1,0 +1,106 @@
+{
+    "autonomous": {
+        "total_conversions": [
+            {
+                "name": "Ashes Episode 1 - 2063",
+                "version": "2.23",
+                "files": [
+                    "ashes/AshesSAMenu.pk3",
+                    "ashes/Ashes2063Enriched2_23.pk3",
+                    "ashes/Ashes2063EnrichedFDPatch.pk3"
+                ]
+            },
+            {
+                "name": "Ashes Episode 2 - Afterglow",
+                "version": "1.10",
+                "files": [
+                    "ashes/AshesSAMenu.pk3",
+                    "ashes/AshesAfterglow1_10.pk3"
+                ]
+            }
+        ],
+        "predefined_combination": [
+            {
+                "name": "Hexen HD",
+                "iwads": "hexen.wad",
+                "files": [
+                    "hexen_hd/h_PBR_v461.pk3",
+                    "hexen_hd/HEXENREMADE.wad",
+                    "hexen_hd/Hexen_HQ_Sounds.pk3",
+                    "hexen_hd/hexen_gz_v4.pk3",
+                    "hexen_hd/Universal_Rain_and_Snow.pk3",
+                    "hexen_hd/HexenI7MusV3.pk3",
+                    "hexen_hd/nashgore.pk3"
+                ]
+            }
+        ]
+    },
+    "extending": {
+        "gameplay": [
+            {
+                "name": "Brutal Doom (CE)",
+                "version": "21.12.3",
+                "url": "https://github.com/BLOODWOLF333/Brutal-Doom-Community-Expansion",
+                "allow_other": true,
+                "contains_weapons": true,
+                "files": [
+                    "brutalv21.12.3HF.pk3"
+                ]
+            },
+            {
+                "name": "Brutal Doom Extended Edition",
+                "version": "9.0",
+                "url": "https://www.moddb.com/mods/brutal-doom-extended-edition",
+                "allow_other": true,
+                "contains_weapons": true,
+                "files": [
+                    "Brutal_Doom_Extended_Edition_v9.0/Brutal_Doom_Extended_Edition.pk3",
+                    "Brutal_Doom_Extended_Edition_Community_Weapons_Pack.pk3",
+                    "Brutal_Doom_Extended_Edition_HXRTC_Hud.pk3"
+                ]
+            },
+            {
+                "name": "Brutal Trailblazer",
+                "version": "1.5e",
+                "url": "https://forum.zdoom.org/viewtopic.php?t=56465&hilit=brutal+trailblazer",
+                "contains_weapons": true,
+                "files": [
+                    "Brutal_Trailblazer_1.5e/bd21monstersonlyfix.pk3",
+                    "Brutal_Trailblazer_1.5e/Trailblazer.pk3",
+                    "Brutal_Trailblazer_1.5e/Brutal Trailblazer Patch v1.5e.pk3"
+                ]
+            }
+        ],
+        "weapon_pack": [
+            {
+                "name": "Call Of Doom - Black Warfare (Brutal Doom Version)",
+                "version": "2.0",
+                "files": [
+                    "CODBW_FileA_Brutal_v2.pk3",
+                    "CODBW_FileB_HD_v2.pk3"
+                ]
+            },
+            {
+                "name": "Painkiller Mutilator",
+                "version": "1.7",
+                "files": [
+                    "painkiller_mutilator/Painkiller_Weapons_3D.pk3"
+                ]
+            }
+        ],
+        "maps": [
+            {
+                "name": "Doom",
+                "iwads": [
+                    "doom.wad"
+                ]
+            },
+            {
+                "name": "Doom 2",
+                "iwads": [
+                    "doom2.wad"
+                ]
+            }
+        ]
+    }
+}

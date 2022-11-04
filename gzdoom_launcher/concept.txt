@@ -1,0 +1,19 @@
+Launcher "Generates the command"
+
+Addon Types:
+    Single Selection:
+        - Total Conversions
+        - Predefined Combinations
+    Multiple Selections:
+        - Gameplay
+    Single Selection Per Type:
+        - Weapons
+        - Maps
+
+Gameplay Types:
+    - Contains Brutal Doom Variant -> TRUE/FALSE
+    - Allow Other Gameplay -> TRUE/FALSE
+    - Contains Weapons -> TRUE/FALSE
+    - Contains Maps -> TRUE/FALSE
+    - Limited Map Packs -> []
+
