@@ -1,7 +1,7 @@
 .git
 .idea
+.mypy_cache
 */.idea
-impf_termin_tester/**
 .DS_Store
 *.log
 *.tmp
