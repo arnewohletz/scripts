@@ -254,7 +254,7 @@ class BrutalDoom(Gameplay):
 
 class BrutalDoomExtendedEdition(Gameplay):
     name = "Brutal Doom Extended Edition"
-    version = "9.2"
+    version = "9.5"
     url = "https://www.moddb.com/mods/brutal-doom-extended-edition"
     allows_more_current_type = True
     files = ("Brutal_Doom_Extended_Edition/Brutal_Doom_Extended_Edition.pk3",
@@ -271,6 +271,14 @@ class BrutalTrailblazer(Gameplay):
              "Brutal_Trailblazer_1.5e/Trailblazer.pk3",
              "Brutal_Trailblazer_1.5e/Brutal_Trailblazer_Patch_v15e.pk3")
 
+
+class BulletTimeX(Gameplay):
+    name = "Bullet Time X"
+    version = "111.1"
+    url = "https://www.moddb.com/games/doom-ii/addons/bullet-time-x"
+    allows_more_current_type = True
+    files = ("bullet-time-x.pk3",)
+    
 
 class DarkForcesMusic(Gameplay):
     name = "Dark Forces Music"
@@ -350,6 +358,7 @@ class ProjectBrutality(Gameplay):
     url = "https://github.com/pa1nki113r/Project_Brutality"
     allows_brutal_doom = False
     contains_weapons = True
+    allows_more_current_type = True
     files = ("Project_Brutality-master.zip",)
 
 
