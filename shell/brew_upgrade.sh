@@ -13,22 +13,8 @@ fi
 touch "$log_file"
 /usr/local/bin/brew upgrade >"$log_file" 2>&1
 
-match=$(/usr/local/bin/pcregrep -o1 "$update_version_regex" "$log_file")
-UPGRADE_APPS=($(echo $match))
-
-match=$(/usr/local/bin/pcregrep -o1 -o2 --om-separator=' ' "$update_version_regex" "$log_file")
-UPGRADE_APP_MESSAGES=($(echo $match | tr " " "_"))
-
-ITER=1
-msg=""
-
-for val in "${UPGRADE_APPS[@]}"; do
-  msg+="$(echo $UPGRADE_APP_MESSAGES[$ITER] | tr "_" " ")"
-  ((ITER++))
-done
+msg=$(/usr/local/bin/pcregrep -o1 -o2 --om-separator=' ' "$update_version_regex" "$log_file")
 
 if [[ -n $msg ]]; then
   /usr/local/bin/noti -t "Package(s) updated" -m "$msg"
 fi
-
-
