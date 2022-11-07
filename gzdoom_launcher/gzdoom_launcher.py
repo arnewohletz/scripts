@@ -438,6 +438,13 @@ class Doom2MasterLevels(VersatileMapPack):
 class Doom2NoRestForTheLiving(VersatileMapPack):
     name = "Doom 2 - No Rest for the Living"
     files = ("NERVE.wad",)
+    
+
+class DBP53(VersatileMapPack):
+    name = "DBP53: Plutonian Sunrise"
+    version = "1.1"
+    url = "https://www.moddb.com/mods/plutonian-sunrise"
+    files = ("DBP_53.wad",)
 
 
 class DragonSektorRemake(VersatileMapPack):
@@ -445,6 +452,7 @@ class DragonSektorRemake(VersatileMapPack):
     version = "0.43"
     url = "https://www.moddb.com/mods/dragon-sector-the-remake"
     files = ("dragon-sector-remake-v0.43.pk3",)
+
 
 class FinalDoom(VersatileMapPack):
     name = "Final Doom - TNT: Evilution"
@@ -460,13 +468,6 @@ class HellOnEarthStarterPack(VersatileMapPack):
 class PlutoniaExperiment(VersatileMapPack):
     name = "Final Doom - Plutonia Experiment"
     iwads = ("plutonia.wad",)
-
-
-class ReMod(VersatileMapPack):
-    name = "ReMod"
-    version = "4"
-    url = "https://www.moddb.com/mods/remod"
-    files = ("ReMod.pk3",)
 
 
 class Sigil(VersatileMapPack):
