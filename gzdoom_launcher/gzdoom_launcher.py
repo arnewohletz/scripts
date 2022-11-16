@@ -438,13 +438,6 @@ class Doom2MasterLevels(VersatileMapPack):
 class Doom2NoRestForTheLiving(VersatileMapPack):
     name = "Doom 2 - No Rest for the Living"
     files = ("NERVE.wad",)
-    
-
-class DBP53(VersatileMapPack):
-    name = "DBP53: Plutonian Sunrise"
-    version = "1.1"
-    url = "https://www.moddb.com/mods/plutonian-sunrise"
-    files = ("DBP_53.wad",)
 
 
 class DragonSektorRemake(VersatileMapPack):
