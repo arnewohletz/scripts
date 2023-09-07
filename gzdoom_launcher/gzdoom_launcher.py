@@ -6,7 +6,7 @@ is_gameplay = True
 is_mappack = True
 is_weapons = True
 
-root_dir = "~/Library/Application\ Support/gzdoom/"
+root_dir = "~/Library/Application\\ Support/gzdoom/"
 
 
 class Launcher:
@@ -30,12 +30,18 @@ class Launcher:
 
     def json_to_addon_objects(self, json_data):
         return (
-            [TotalConversion(**data) for data in json_data["total_conversion"]],
-            [PredefinedCombination(**data) for data in json_data["predefined_combination"]],
-            [Gameplay(**data) for data in json_data["gameplay_mod"]],
-            [WeaponPack(**data) for data in json_data["weapon_pack"]],
-            [MapPack(**data) for data in json_data["map_pack"]],
-            [XimStarWarsMapPack(**data) for data in json_data["xim_star_wars_map_pack"]]
+            [TotalConversion(**data) for data in json_data[
+                "total_conversion"]],
+            [PredefinedCombination(**data) for data in json_data[
+                "predefined_combination"]],
+            [Gameplay(**data) for data in json_data[
+                "gameplay_mod"]],
+            [WeaponPack(**data) for data in json_data[
+                "weapon_pack"]],
+            [MapPack(**data) for data in json_data[
+                "map_pack"]],
+            [XimStarWarsMapPack(**data) for data in json_data[
+                "xim_star_wars_map_pack"]]
         )
 
     def select_addon(self, addon_tuple, last_input=False):
@@ -56,7 +62,8 @@ class Launcher:
                     self.command += f" -file {root_dir + file}"
             if hasattr(addon, "allowed_map_packs"):
                 print(addon.allowed_map_packs)
-                with open(os.path.dirname(__file__) + "/addons.json", "r") as file:
+                with open(os.path.dirname(__file__) +
+                          "/addons.json", "r") as file:
                     if (addon.allowed_map_packs == "xim_star_wars_map_pack"):
                         self.allowed_map_packs = self.xim_star_wars_map_pack
             if last_input:
@@ -74,9 +81,10 @@ class Launcher:
 def print_addons(addons_tuple) -> None:
     for i, addon in enumerate(addons_tuple):
         if hasattr(addon, "version"):
-            print(f"{' '*(3 - len(str(i)))}[{i}] {addon.name} (v{addon.version})") 
+            print(f"{' '*(3 - len(str(i)))}[{i}] {addon.name} "
+                  f"(v{addon.version})")
         else:
-            print(f"{' '*(3 - len(str(i)))}[{i}] {addon.name}") 
+            print(f"{' '*(3 - len(str(i)))}[{i}] {addon.name}")
 
 
 class AutonomousAddon(object):
