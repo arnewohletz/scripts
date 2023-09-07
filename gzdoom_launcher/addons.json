@@ -1,106 +1,730 @@
 {
-    "autonomous": {
-        "total_conversions": [
-            {
-                "name": "Ashes Episode 1 - 2063",
-                "version": "2.23",
-                "files": [
-                    "ashes/AshesSAMenu.pk3",
-                    "ashes/Ashes2063Enriched2_23.pk3",
-                    "ashes/Ashes2063EnrichedFDPatch.pk3"
-                ]
-            },
-            {
-                "name": "Ashes Episode 2 - Afterglow",
-                "version": "1.10",
-                "files": [
-                    "ashes/AshesSAMenu.pk3",
-                    "ashes/AshesAfterglow1_10.pk3"
-                ]
-            }
-        ],
-        "predefined_combination": [
-            {
-                "name": "Hexen HD",
-                "iwads": "hexen.wad",
-                "files": [
-                    "hexen_hd/h_PBR_v461.pk3",
-                    "hexen_hd/HEXENREMADE.wad",
-                    "hexen_hd/Hexen_HQ_Sounds.pk3",
-                    "hexen_hd/hexen_gz_v4.pk3",
-                    "hexen_hd/Universal_Rain_and_Snow.pk3",
-                    "hexen_hd/HexenI7MusV3.pk3",
-                    "hexen_hd/nashgore.pk3"
-                ]
-            }
-        ]
-    },
-    "extending": {
-        "gameplay": [
-            {
-                "name": "Brutal Doom (CE)",
-                "version": "21.12.3",
-                "url": "https://github.com/BLOODWOLF333/Brutal-Doom-Community-Expansion",
-                "allow_other": true,
-                "contains_weapons": true,
-                "files": [
-                    "brutalv21.12.3HF.pk3"
-                ]
-            },
-            {
-                "name": "Brutal Doom Extended Edition",
-                "version": "9.0",
-                "url": "https://www.moddb.com/mods/brutal-doom-extended-edition",
-                "allow_other": true,
-                "contains_weapons": true,
-                "files": [
-                    "Brutal_Doom_Extended_Edition_v9.0/Brutal_Doom_Extended_Edition.pk3",
-                    "Brutal_Doom_Extended_Edition_Community_Weapons_Pack.pk3",
-                    "Brutal_Doom_Extended_Edition_HXRTC_Hud.pk3"
-                ]
-            },
-            {
-                "name": "Brutal Trailblazer",
-                "version": "1.5e",
-                "url": "https://forum.zdoom.org/viewtopic.php?t=56465&hilit=brutal+trailblazer",
-                "contains_weapons": true,
-                "files": [
-                    "Brutal_Trailblazer_1.5e/bd21monstersonlyfix.pk3",
-                    "Brutal_Trailblazer_1.5e/Trailblazer.pk3",
-                    "Brutal_Trailblazer_1.5e/Brutal Trailblazer Patch v1.5e.pk3"
-                ]
-            }
-        ],
-        "weapon_pack": [
-            {
-                "name": "Call Of Doom - Black Warfare (Brutal Doom Version)",
-                "version": "2.0",
-                "files": [
-                    "CODBW_FileA_Brutal_v2.pk3",
-                    "CODBW_FileB_HD_v2.pk3"
-                ]
-            },
-            {
-                "name": "Painkiller Mutilator",
-                "version": "1.7",
-                "files": [
-                    "painkiller_mutilator/Painkiller_Weapons_3D.pk3"
-                ]
-            }
-        ],
-        "maps": [
-            {
-                "name": "Doom",
-                "iwads": [
-                    "doom.wad"
-                ]
-            },
-            {
-                "name": "Doom 2",
-                "iwads": [
-                    "doom2.wad"
-                ]
-            }
-        ]
-    }
+    "total_conversion": [
+        {
+            "name": "Ashes Episode 1 - 2063",
+            "version": "2.23",
+            "url": "https://www.moddb.com/mods/ashes-2063",
+            "files": [
+                "ashes/AshesSAMenu.pk3",
+                "ashes/Ashes2063Enriched2_23.pk3",
+                "ashes/Ashes2063EnrichedFDPatch.pk3",
+                "ashes/Ashes2063_NeuralUpscale.pk3"
+            ]
+        },
+        {
+            "name": "Ashes Episode 2 - Afterglow",
+            "version": "1.10",
+            "url": "https://www.moddb.com/mods/ashes-2063",
+            "files": [
+                "ashes/AshesSAMenu.pk3",
+                "ashes/AshesAfterglow1_10.pk3",
+                "ashes/AshesAfterGlow_NeuralPack.pk3"
+            ]
+        },
+        {
+            "name": "Asterodead",
+            "version": "20220924",
+            "url": "https://www.moddb.com/mods/asterodead",
+            "files": [
+                "ASTERODEAD_V20220924.pk3"
+            ]
+        },
+        {
+            "name": "Blade Of Agony",
+            "version": "3.1",
+            "url": [
+                "https://www.moddb.com/mods/wolfendoom-blade-of-agony",
+                "https://github.com/Realm667/WolfenDoom"
+            ],
+            "iwads": [
+                "WolfenDoom-master.zip"
+            ],
+            "files": []
+        },
+        {
+            "name": "Brutal Doom 64",
+            "version": "2.5",
+            "url": "https://www.moddb.com/mods/brutal-doom-64",
+            "files": [
+                "Brutal_Doom_64/bd64game_v2.5.pk3",
+                "Brutal_Doom_64/bd64maps_v2.5.pk3"
+            ]
+        },
+        {
+            "name": "Brutal Doom 64 v2.666",
+            "version": "2.666",
+            "url": [
+                "https://github.com/swc132994/BD64game_v2.666",
+                "https://github.com/swc132994/BD64maps_v2.666",
+                "https://www.moddb.com/mods/brutal-doom-64/addons/specific-sound-pack-for-brutal-doom-64-v2666"
+            ],
+            "files": [
+                "Brutal_Doom_64/v2.666/BD64game_v2.666-main.zip",
+                "Brutal_Doom_64/v2.666/BD64maps_v2.666-main.zip",
+                "Brutal_Doom_64/v2.666/Specific_Sndpack_BD64v2666.1/BD_64_Alt_Rif_Mag _Sprite.pk3",
+                "Brutal_Doom_64/v2.666/Specific_Sndpack_BD64v2666.1/NO_FACKIN_WARAMB.pk3",
+                "Brutal_Doom_64/v2.666/Specific_Sndpack_BD64v2666.1/Specific_Sndpack_BD64v2666.pk3",
+                "Brutal_Doom_64/Optional_Addons/Cran_D64Patch_Props_beta1.pk3",
+                "Brutal_Doom_64/Optional_Addons/Cran_D64Patch_skygenerator.pk3",
+                "Brutal_Doom_64/Optional_Addons/Cran_D64PatchTex_v1.4.pk3"
+            ]
+        },
+        {
+            "name": "Brutal Heretic",
+            "version": "5.0",
+            "url": "https://nzdoom.net/printthread.php?tid=3",
+            "iwads": [
+                "heretic.wad"
+            ],
+            "files": [
+                "brutal_heretic/H20MUS.wad",
+                "brutal_heretic/BrutalHereticRPG_V5.0.pk3",
+                "brutal_heretic/heretic_gz.pk3"
+            ]
+        },
+        {
+            "name": "Brutal Hexen",
+            "version": "7.5",
+            "url": "https://nzdoom.net/showthread.php?tid=2",
+            "iwads": [
+                "hexen.wad"
+            ],
+            "files": [
+                "brutal_hexen/3_HEXEN64.wad",
+                "brutal_hexen/damnums_1.0.2.pk3",
+                "brutal_hexen/hexen_gz.pk3",
+                "brutal_hexen/Resurrectupdate.pk3",
+                "brutal_hexen/GatherYourParty.pk3",
+                "brutal_hexen/BrutalHexenRPG_V7.5.pk3"
+            ]
+        },
+        {
+            "name": "Brutal Wolfenstein 3D",
+            "version": "7.0",
+            "url": "https://www.moddb.com/mods/brutal-wolfenstein-3d",
+            "files": [
+                "brutal_wolfenstein_3d/Brutal_Soundpack_Spear_of_Destiny_Edition.pk3",
+                "brutal_wolfenstein_3d/ZMC-BWV7.0.pk3"
+            ]
+        },
+        {
+            "name": "Doom 64 CE",
+            "version": "3.7.1.2",
+            "url": "https://www.moddb.com/mods/doom-ce",
+            "files": [
+                "DOOM64.CE-3.7.1.2/DOOM64.CE.ipk3",
+                "DOOM64.CE-3.7.1.2/DOOM64.CE.Maps.LostLevels.pk3",
+                "DOOM64.CE-3.7.1.2/DOOM64.CE.Addon.BGM.Extended.pk3",
+                "DOOM64.CE-3.7.1.2/DOOM64.CE.Addon.GFX.Brightmaps.pk3",
+                "DOOM64.CE-3.7.1.2/DOOM64.CE.Addon.GFX.Decals.pk3",
+                "DOOM64.CE-3.7.1.2/DOOM64.CE.Addon.GFX.Extra.pk3",
+                "DOOM64.CE-3.7.1.2/DOOM64.CE.Addon.GFX.Parallax.pk3",
+                "DOOM64.CE-3.7.1.2/DOOM64.CE.Addon.GFX.PBR.pk3",
+                "DOOM64.CE-3.7.1.2/DOOM64.CE.Addon.GFX.Upscale.pk3",
+                "DOOM64.CE-3.7.1.2/DOOM64.CE.Addon.SFX.HQ.pk3"
+            ],
+            "iwads": [
+                "DOOM64.CE-3.7.1.2/DOOM64.IWAD"
+            ]
+        },
+        {
+            "name": "Golden Souls - Remastered",
+            "version": "1.0",
+            "url": "https://batandy.itch.io/goldensouls",
+            "files": [
+                "GoldenSouls_Remastered_V1.0_hotfix.pk3"
+            ]
+        },
+        {
+            "name": "Golden Souls 2",
+            "version": "0.6.1",
+            "url": "https://batandy.itch.io/goldensouls2",
+            "files": [
+                "GoldenSouls2_1.4.pk3"
+            ]
+        },
+        {
+            "name": "Pirate Doom",
+            "version": "1.8.5",
+            "url": "https://www.moddb.com/mods/pirate-doom",
+            "files": [
+                "Pirates.wad"
+            ]
+        },
+        {
+            "name": "Total Chaos",
+            "version": "1.40",
+            "url": "https://www.moddb.com/mods/total-chaos",
+            "files": [
+                "total_chaos/totalchaos.pk3",
+                "total_chaos/zd_extra.pk3 +set gl_precache 1"
+            ]
+        },
+        {
+            "name": "Wolfenstein X: Hearts of Liberty",
+            "version": "Final",
+            "url": "https://www.moddb.com/downloads/wolfenstein-x-hearts-of-liberty-final-edition-complete-edition",
+            "files": [
+                "WolfensteinX_HeartsOfLibertyFinalEditionFix/WolfX_v2.pk3",
+                "WolfensteinX_HeartsOfLibertyFinalEditionFix/WolfX_heartsofliberty-finaledition-fix.pk3"
+            ]
+        }
+    ],
+    "predefined_combination": [
+        {
+            "name": "Hexen HD",
+            "iwads": [
+                "hexen.wad"
+            ],
+            "files": [
+                "hexen_hd/h_PBR_v461.pk3",
+                "hexen_hd/HEXENREMADE.wad",
+                "hexen_hd/Hexen_HQ_Sounds.pk3",
+                "hexen_hd/hexen_gz_v4.pk3",
+                "hexen_hd/Universal_Rain_and_Snow.pk3",
+                "hexen_hd/HexenI7MusV3.pk3",
+                "hexen_hd/nashgore.pk3"
+            ]
+        }
+    ],
+    "gameplay_mod": [
+        {
+            "name": "Atom Rain: X Protocol + Hell From Earth",
+            "version": "1.1",
+            "url": [
+                "https://www.moddb.com/mods/atom-rain-x-protoc  ol",
+                "https://www.moddb.com/mods/hell-from-earth"
+            ],
+            "allow_other": false,
+            "contains_weapons": true,
+            "files": [
+                "MACE-ARXP_V1.1A.pk3",
+                "HFE_v1.1.pk3"
+            ]
+        },
+        {
+            "name": "Bloom (Doom/Blood crossover)",
+            "version": "Final",
+            "url": "https://www.moddb.com/mods/bloom-doomblood-crossover",
+            "allow_other": false,
+            "contains_weapons": true,
+            "files": [
+                "Bloom.pk3"
+            ]
+        },
+        {
+            "name": "Brutal Doom (Community Expansion)",
+            "version": "21.14.0",
+            "url": "https://github.com/BLOODWOLF333/Brutal-Doom-Community-Expansion",
+            "allow_other": true,
+            "contains_weapons": true,
+            "files": [
+                "brutalv21.14.0.pk3"
+            ]
+        },
+        {
+            "name": "Brutal Doom Extended Edition",
+            "version": "20.1",
+            "url": "https://www.moddb.com/mods/brutal-doom-extended-edition",
+            "allow_other": true,
+            "contains_weapons": true,
+            "files": [
+                "Brutal_Doom_Extended_Edition/Brutal_Doom_Extended_Edition.pk3",
+                "Brutal_Doom_Extended_Edition/Brutal_Doom_Extended_Edition_HXRTC_Hud.pk3",
+                "Brutal_Doom_Extended_Edition/Brutal_Doom_Extended_Edition_Addons/GearBox_Weapon_Wheel.pk3",
+                "Brutal_Doom_Extended_Edition/Brutal_Doom_Extended_Edition_Addons/Helmet_Mugshot.wad",
+                "Brutal_Doom_Extended_Edition/Brutal_Doom_Extended_Edition_Addons/Hit_Markers.pk3",
+                "Brutal_Doom_Extended_Edition/Brutal_Doom_Extended_Edition_Addons/Level_Info.pk3",
+                "Brutal_Doom_Extended_Edition/Brutal_Doom_Extended_Edition_Addons/Target_Spy.zip",
+                "Brutal_Doom_Extended_Edition/Brutal_Doom_Extended_Edition_Addons/Warm_Reception.pk3"
+            ]
+        },
+        {
+            "name": "Brutal Trailblazer",
+            "version": "1.5e",
+            "url": "https://forum.zdoom.org/viewtopic.php?t=56465&hilit=brutal+trailblazer",
+            "contains_weapons": true,
+            "files": [
+                "Brutal_Trailblazer_1.5e/bd21monstersonlyfix.pk3",
+                "Brutal_Trailblazer_1.5e/Trailblazer.pk3",
+                "Brutal_Trailblazer_1.5e/Brutal Trailblazer Patch v1.5e.pk3"
+            ]
+        },
+        {
+            "name": "Bullet Time X",
+            "version": "111.1",
+            "url": "https://www.moddb.com/games/doom-ii/addons/bullet-time-x",
+            "files": [
+                "bullet-time-x.pk3"
+            ]
+        },
+        {
+            "name": "Cody Cruikshank's Project Brutality",
+            "version": "1.11",
+            "url": "https://www.moddb.com/mods/cody-cruikshanks-project-brutality1",
+            "files": [
+                "Cody_Cruikshanks_Project_brutality_11.pk3"
+            ]
+        },
+        {
+            "name": "Dark Forces Music",
+            "version": "Feb 14th, 2020",
+            "url": "https://www.moddb.com/downloads/dark-forces-music-patch",
+            "files": [
+                "music/DarkForcesMusicX.pk3"
+            ]
+        },
+        {
+            "name": "DN3Doom (Duke Nukem Style)",
+            "version": "1.07b",
+            "url": "https://www.moddb.com/mods/dn3doom",
+            "contains_weapons": true,
+            "files": [
+                "DN3DoomDuke_Nukem3D_FullMusics.wad",
+                "DN3Doom/Duke_Music_and_Textures.pk3",
+                "DN3Doom/Duke_SiN_mod.zip",
+                "DN3Doom/Hd_Sounds.pk3",
+                "DN3Doom/SpriteShadow_v2.pk3",
+                "DN3Doom/DN3DMP5K.pk3",
+                "DN3Doom/DN3DoomAltPC.pk3",
+                "DN3Doom/DN3DooM.pk3"
+            ]
+        },
+        {
+            "name": "Doom Brutality Ultimate (Enhanced Project Brutality 3.0) - ABANDONED",
+            "version": "1.3",
+            "url": "https://www.moddb.com/mods/doom-brutality-ultimate",
+            "files": [
+                "Doom_Brutality_Ultimate/1._Doom_Brutality_Ultimate.zip",
+                "Doom_Brutality_Ultimate/2._Ultimate_Upscale_for_Original_Weapons.pk3",
+                "Doom_Brutality_Ultimate/3._Upscaled_Enemies.pk3",
+                "Doom_Brutality_Ultimate/4._Ultimate_Textures_Updated_1.pk3",
+                "Doom_Brutality_Ultimate/5._Ultimate_Textures_Updated_2.pk3",
+                "Doom_Brutality_Ultimate/6._Ultimate_Metal_Playlist.pk3",
+                "Doom_Brutality_Ultimate/7._Weapon_Auto_Cannon.pk3",
+                "Doom_Brutality_Ultimate/7._Weapon_Cyberdemon.pk3",
+                "Doom_Brutality_Ultimate/7._Weapon_Desert_Update.pk3",
+                "Doom_Brutality_Ultimate/7._Weapon_Rifle_OldHmg.pk3",
+                "Doom_Brutality_Ultimate/7._Weapon_Shotgun_Commader.pk3",
+                "Doom_Brutality_Ultimate/7._Weapon_Shotgun_Hexa.pk3",
+                "Doom_Brutality_Ultimate/8._Glory_Kill.pk3",
+                "Doom_Brutality_Ultimate/9._Glory_Update.pk3",
+                "Doom_Brutality_Ultimate/10._Super_Gore.pk3",
+                "Doom_Brutality_Ultimate/11._Ultimate_Upscale_for_Additional_Weapons.pk3"
+            ]
+        },
+        {
+            "name": "Doom Brutality Ultimate + Project Brutality Badass Edition Mods - ABANDONED",
+            "version": "1.3",
+            "url": "https://www.moddb.com/mods/doom-brutality-ultimate",
+            "files": [
+                "Doom_Brutality_Ultimate/1._Doom_Brutality_Ultimate.zip",
+                "Doom_Brutality_Ultimate/2._Ultimate_Upscale_for_Original_Weapons.pk3",
+                "Doom_Brutality_Ultimate/4._Ultimate_Textures_Updated_1.pk3",
+                "Doom_Brutality_Ultimate/5._Ultimate_Textures_Updated_2.pk3",
+                "Doom_Brutality_Ultimate/6._Ultimate_Metal_Playlist.pk3",
+                "Doom_Brutality_Ultimate/7._Weapon_Auto_Cannon.pk3",
+                "Doom_Brutality_Ultimate/7._Weapon_Cyberdemon.pk3",
+                "Doom_Brutality_Ultimate/7._Weapon_Desert_Update.pk3",
+                "Doom_Brutality_Ultimate/7._Weapon_Rifle_OldHmg.pk3",
+                "Doom_Brutality_Ultimate/7._Weapon_Shotgun_Commader.pk3",
+                "Doom_Brutality_Ultimate/7._Weapon_Shotgun_Hexa.pk3",
+                "Doom_Brutality_Ultimate/8._Glory_Kill.pk3",
+                "Doom_Brutality_Ultimate/9._Glory_Update.pk3",
+                "Doom_Brutality_Ultimate/10._Super_Gore.pk3",
+                "Doom_Brutality_Ultimate/11._Ultimate_Upscale_for_Additional_Weapons.pk3",
+                "Project_Brutality_Badass_Edition/02_Universal_Ambience_v.6.0.pk3",
+                "Project_Brutality_Badass_Edition/03_Ambient Decorations_v.6.0.pk3",
+                "Project_Brutality_Badass_Edition/04_CosmoAmbience_Script_v6.0.pk3",
+                "Project_Brutality_Badass_Edition/Bullet_Time_X.pk3",
+                "Project_Brutality_Badass_Edition/Doom_Blade_v2.0.pk3",
+                "Project_Brutality_Badass_Edition/Flashlight++_v8.5.pk3",
+                "Project_Brutality_Badass_Edition/Hitmarkers_v1.0.pk3",
+                "Project_Brutality_Badass_Edition/Keepweapons_v1.3.pk3",
+                "Project_Brutality_Badass_Edition/LTP_V6.8.pk3",
+                "Project_Brutality_Badass_Edition/RealGore_v3.0.pk3",
+                "Project_Brutality_Badass_Edition/Tan_Helmet_Doomguy_Mugshot_v2.2.pk3",
+                "Project_Brutality_Badass_Edition/ToggleFreeCamera_v1.0.pk3"
+            ]
+        },
+        {
+            "name": "Doom Enhanced",
+            "version": "Aug 15th, 2022",
+            "url": "https://www.moddb.com/mods/doom-enhancement-project/addons",
+            "files": [
+                "doom_enhanced/CustomSounds.pk3",
+                "doom_enhanced/HDObjects.pk3",
+                "doom_enhanced/HDTextures.pk3",
+                "doom_enhanced/Materials.pk3"
+            ]
+        },
+        {
+            "name": "Hellrider",
+            "version": "0.9c",
+            "url": "https://forum.zdoom.org/viewtopic.php?f=43&t=68575",
+            "contains_weapons": true,
+            "files": [
+                "Hellrider_0.9c_[280421].pk3",
+                "bd21monstersonlyfix.pk3"
+            ]
+        },
+        {
+            "name": "High Quality PSX Music (Slow, Gloomy)",
+            "version": "Jun 9th, 2015",
+            "url": "https://www.moddb.com/games/doom-ii/addons/psx-soundtrack-replacement-high-quality",
+            "files": [
+                "music/HQPSXMUS.WAD"
+            ]
+        },
+        {
+            "name": "Lambda Strike",
+            "version": "1.0.5",
+            "url": "https://www.moddb.com/mods/lambda-strike",
+            "contains_weapons": true,
+            "files": [
+                "Lambda-Strike1_0_5/Lambda-Strike_Resources.pk3",
+                "Lambda-Strike1_0_5/Lambda-Strike_Code.pk3",
+                "Lambda-Strike1_0_5/Lambda-Strike_HD.pk3"
+            ]
+        },
+        {
+            "name": "Live Through Doom",
+            "version": "0.595c",
+            "url": "https://forum.zdoom.org/viewtopic.php?t=68573",
+            "contains_weapons": true,
+            "files": [
+                "LiTDOOM/LiTDOOM_0.595c.pk3",
+                "music/hellsamb.wad"
+            ]
+        },
+        {
+            "name": "Maps Of Chaos - Overkill",
+            "version": "1.28a",
+            "url": "https://www.moddb.com/mods/brutal-doom/addons/brutalized-doom-and-doom-ii/page/8",
+            "files": [
+                "mapsofchaos-ok.wad"
+            ]
+        },
+        {
+            "name": "Painkiller Mutilator (Enemies & Weapons)",
+            "version": "1.7",
+            "url": "https://www.moddb.com/mods/painkiller-for-doom",
+            "contains_weapons": true,
+            "files": [
+                "painkiller_mutilator/Painkiller_Monsters.pk3",
+                "painkiller_mutilator/Painkiller_Weapons_3D.pk3"
+            ]
+        },
+        {
+            "name": "Project Brutality (Badass Edition - incl. other mods) - OUTDATED, ABANDONED",
+            "version": "2.0",
+            "url": "https://www.moddb.com/mods/project-brutality",
+            "contains_weapons": true,
+            "files": [
+                "Project_Brutality_Badass_Edition/01_Project_Brutality_Master_v.8.5.pk3",
+                "Project_Brutality_Badass_Edition/02_Universal_Ambience_v.6.0.pk3",
+                "Project_Brutality_Badass_Edition/03_Ambient Decorations_v.6.0.pk3",
+                "Project_Brutality_Badass_Edition/04_CosmoAmbience_Script_v6.0.pk3",
+                "Project_Brutality_Badass_Edition/Badass_Metal_Playlist_v2.9.pk3",
+                "Project_Brutality_Badass_Edition/Bullet_Time_X.pk3",
+                "Project_Brutality_Badass_Edition/DKs_Badass_Sounds_v2.6.pk3",
+                "Project_Brutality_Badass_Edition/DKs_HD_Textures_Lite_4.2.pk3",
+                "Project_Brutality_Badass_Edition/Doom_Blade_v2.0.pk3",
+                "Project_Brutality_Badass_Edition/Flashlight++_v8.5.pk3",
+                "Project_Brutality_Badass_Edition/Hitmarkers_v1.0.pk3",
+                "Project_Brutality_Badass_Edition/Keepweapons_v1.3.pk3",
+                "Project_Brutality_Badass_Edition/LTP_V6.8.pk3",
+                "Project_Brutality_Badass_Edition/RealGore_v3.0.pk3",
+                "Project_Brutality_Badass_Edition/Tan_Helmet_Doomguy_Mugshot_v2.2.pk3",
+                "Project_Brutality_Badass_Edition/ToggleFreeCamera_v1.0.pk3"
+            ]
+        },
+        {
+            "name": "Project Brutality",
+            "version": "August 28th 2023",
+            "url": "https://github.com/pa1nki113r/Project_Brutality",
+            "contains_weapons": true,
+            "files": [
+                "Project_Brutality-popguy12-PB-J.zip"
+            ]
+        },
+        {
+            "name": "Relightning",
+            "version": "4.0165b",
+            "url": "https://www.moddb.com/mods/relighting",
+            "contains_weapons": false,
+            "files": [
+                "relighting_v4.0165b.pk3"
+            ]
+        },
+        {
+            "name": "Voxel Doom II",
+            "version": "2.1",
+            "url": "https://www.moddb.com/mods/voxel-doom-ii",
+            "contains_weapons": true,
+            "files": [
+                "cheello_voxels_v2_1.pk3"
+            ]
+        },
+        {
+            "name": "Wolf3Doom",
+            "version": "1.0",
+            "url": "https://www.moddb.com/mods/wolf3doom",
+            "contains_weapons": true,
+            "files": [
+                "wolf3doom/Wolf3DoomV1_0.pk3",
+                "wolf3doom/sm4BBgorev3.pk3"
+            ]
+        },
+        {
+            "name": "Woomy: Project Petersen",
+            "version": "3.1",
+            "url": "https://www.moddb.com/mods/woomy-project-petersen",
+            "contains_weapons": true,
+            "files": [
+                "woomy_project_petersen/WOOMY_Project_Petersen.pk3",
+                "woomy_project_petersen/WOOMY_DestProps.pk3",
+                "woomy_project_petersen/Meat_Grinder_Enemies.pk3"
+            ]
+        },
+        {
+            "name": "Xim's Star Wars",
+            "version": "3.1.2",
+            "url": "https://www.moddb.com/mods/xims-star-wars-doom",
+            "files": [
+                "Xim-StarWars/Xim-StarWars-v3.1.2.pk3",
+                "Xim-StarWars/Xim-StarWarsProps.pk3",
+                "Xim-StarWars/AddOns/Xim-DarkForcesHUD.pk3",
+                "Xim-StarWars/Xim-StarWarsTextures-v2.2.pk3",
+                "Xim-StarWars/Xim-StarWarsMidi.pk3"
+            ],
+            "allowed_map_packs": "xim_star_wars_map_pack"
+        }
+    ],
+    "weapon_pack": [
+        {
+            "name": "Ashes 2063 Weapons",
+            "version": "2.23",
+            "url": "https://www.moddb.com/mods/ashes-2063",
+            "files": [
+                "ashes/AshesWeaponsV2_223.pk3"
+            ]
+        },
+        {
+            "name": "Call Of Doom - Black Warfare (Brutal Doom Version)",
+            "version": "2.0",
+            "url": "https://www.moddb.com/mods/call-of-doom-cod-style-advanced-weapons-mod",
+            "files": [
+                "call_of_doom/CODBW_FileA_Brutal_v2.pk3",
+                "call_of_doom/CODBW_FileB_HD_v2.pk3"
+            ]
+        },
+        {
+            "name": "Doom Tournament + Doomreal",
+            "version": "1.2",
+            "url": "https://forum.zdoom.org/viewtopic.php?t=60759",
+            "files": [
+                "doom_tournament/flak_m.pk3",
+                "doom_tournament/stinger_m.pk3",
+                "doom_tournament/bd21monstersonlyfix.pk3"
+            ]
+        },
+        {
+            "name": "Painkiller Mutilator",
+            "version": "1.7",
+            "url": "https://www.moddb.com/mods/painkiller-for-doom",
+            "files": [
+                "painkiller_mutilator/Painkiller_Weapons_3D.pk3"
+            ]
+        }
+    ],
+    "map_pack": [
+        {
+            "name": "Auger;Zenith",
+            "version": "July 23rd, 2021",
+            "url": "https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/dbp37_augzen",
+            "files": [
+                "DBP37_AUGZEN.wad"
+            ]
+        },
+        {
+            "name": "Bloodline",
+            "version": "Jan 26 2023",
+            "url": "https://www.moddb.com/mods/bloodline-wad",
+            "files": [
+                "Bloodline.wad"
+            ]
+        },
+        {
+            "name": "Doom",
+            "version": "1.0",
+            "url": "",
+            "iwads": [
+                "doom.wad"
+            ]
+        },
+        {
+            "name": "Doom 2",
+            "version": "1.0",
+            "url": "",
+            "iwads": [
+                "doom2.wad"
+            ]
+        },
+        {
+            "name": "Doom 2 - Master Levels",
+            "version": "1.0",
+            "url": "",
+            "files": [
+                "DOOM2_THE_MASTER_LEVELS.pk3"
+            ]
+        },
+        {
+            "name": "Doom 2 - No Rest for the Living",
+            "version": "1.0",
+            "url": "",
+            "files": [
+                "NERVE.wad"
+            ]
+        },
+        {
+            "name": "Doom Slayer Chronicles (NOT WORKING, WAIT FOR NEXT RELEASE)",
+            "version": "1.0.2",
+            "url": "https://www.moddb.com/mods/doom-slayer-chronicles",
+            "files": [
+                "Doom_Slayer_Chronicles/DSC-1.0.2.pk3",
+                "Doom_Slayer_Chronicles/DSCmaterialPack.pk3"
+            ]
+        },
+        {
+            "name": "Dragon Sektor Remake",
+            "version": "0.61",
+            "url": "https://www.moddb.com/mods/dragon-sector-the-remake",
+            "files": [
+                "dragon-sector-remake-v0.61.pk3"
+            ]
+        },
+        {
+            "name": "Final Doom - TNT: Evilution",
+            "version": "1.0",
+            "url": "",
+            "iwads": [
+                "TNT.WAD"
+            ]
+        },
+        {
+            "name": "Hell On Earth Starter Pack",
+            "version": "Jan 1st, 2016",
+            "url": "https://www.moddb.com/mods/recurring-nightmare",
+            "files": [
+                "hellonearth/ExtraTextures.wad",
+                "hellonearth/hellonearthstarterpack.wad"
+            ]
+        },
+        {
+            "name": "Final Doom - Plutonia Experiment",
+            "version": "1.0",
+            "url": "",
+            "iwads": [
+                "PLUTONIA.WAD"
+            ]
+        },
+        {
+            "name": "Running Late 2",
+            "version": "01/01/2020",
+            "url": "https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/rl2",
+            "files": [
+                "RL2.wad"
+            ]
+        },
+        {
+            "name": "Sigil a.k.a. Doom - Episode 5",
+            "version": "1.21",
+            "url": "https://romero.com/sigil",
+            "files": [
+                "SIGIL_v1_21.wad"
+            ],
+            "iwads": [
+                "doom.wad"
+            ]
+        },
+        {
+            "name": "UAC Ultra",
+            "version": "1.2",
+            "url": "https://www.doomworld.com/idgames/levels/doom2/Ports/s-u/uacultra",
+            "files": [
+                "uacultra.wad"
+            ]
+        },
+        {
+            "name": "Valiant: Vaccinated Edition",
+            "version": "December 3rd, 2015",
+            "url": "https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/valve",
+            "files": [
+                "valve.wad"
+            ]
+        }
+    ],
+    "xim_star_wars_map_pack": [
+        {
+            "name": "Back to Saturn X - Episode 1",
+            "version": "1.1.6",
+            "url": "https://www.moddb.com/mods/back-to-saturn-x",
+            "files": [
+                "Xim-StarWars/Maps/btsx_e1/btsx_e1a.wad",
+                "Xim-StarWars/Maps/btsx_e1/btsx_e1b.wad"
+            ]
+        },
+        {
+            "name": "Back to Saturn X - Episode 2",
+            "version": "1.0.1",
+            "url": "https://www.moddb.com/mods/back-to-saturn-x",
+            "files": [
+                "Xim-StarWars/Maps/btsx_e2/btsx_e2a.wad",
+                "Xim-StarWars/Maps/btsx_e2/btsx_e2b.wad"
+            ]
+        },
+        {
+            "name": "Back to Saturn X - Episode 3",
+            "version": "Preview",
+            "url": "https://www.doomworld.com/forum/topic/104557-back-to-saturn-x-episode-3-wip-5-map-preview-build-on-page-11/",
+            "files": [
+                "Xim-StarWars/Maps/BTSXE3PR.wad"
+            ]
+        },
+        {
+            "name": "Dark Hour",
+            "version": "2001.08.06",
+            "url": "https://www.doomworld.com/idgames/levels/doom2/Ports/d-f/darkhour",
+            "files": [
+                "Xim-StarWars/Patches/Xim-StarWarsDarkHour.pk3",
+                "Xim-StarWars/Maps/DarkHour.wad"
+            ]
+        },
+        {
+            "name": "Going Down",
+            "version": "2014.02.14",
+            "url": "https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/gd",
+            "files": [
+                "Xim-StarWars/Maps/gd.wad"
+            ]
+        },
+        {
+            "name": "Spacwars",
+            "version": "2015.09.01",
+            "url": "https://www.doomworld.com/idgames/levels/doom2/Ports/s-u/spacwars",
+            "files": [
+                "Xim-StarWars/Patches/Xim-StarWarsSpacwars.pk3",
+                "Xim-StarWars/Maps/spacwars.wad"
+            ]
+        },
+        {
+            "name": "Dark Encounters",
+            "version": "Re-release/bugfix 2019",
+            "url": "https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/drkenctr",
+            "files": [
+                "Xim-StarWars/Maps/drkenctr.wad"
+            ]
+        }
+    ]
 }
