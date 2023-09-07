@@ -1,6 +1,7 @@
 .git
 .idea
 .mypy_cache
+.python-version
 */.idea
 .DS_Store
 *.log
