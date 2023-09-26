@@ -19,6 +19,7 @@ class Launcher:
              self.gameplay_mods,
              self.weapon_packs,
              self.map_packs,
+             self.live_through_doom_map_pack,
              self.xim_star_wars_map_pack) = self.json_to_addon_objects(
                  json.loads(file.read()))
 
@@ -40,6 +41,8 @@ class Launcher:
                 "weapon_pack"]],
             [MapPack(**data) for data in json_data[
                 "map_pack"]],
+            [LiveThroughDoomMapPack(**data) for data in json_data[
+                "live_through_doom_map_pack"]],
             [XimStarWarsMapPack(**data) for data in json_data[
                 "xim_star_wars_map_pack"]]
         )
@@ -64,6 +67,10 @@ class Launcher:
                 print(addon.allowed_map_packs)
                 with open(os.path.dirname(__file__) +
                           "/addons.json", "r") as file:
+                    if (addon.allowed_map_packs ==
+                        "live_through_doom_map_pack"):
+                        self.allowed_map_packs = \
+                            self.live_through_doom_map_pack
                     if (addon.allowed_map_packs == "xim_star_wars_map_pack"):
                         self.allowed_map_packs = self.xim_star_wars_map_pack
             if last_input:
@@ -154,6 +161,16 @@ class MapPack(ExtendingAddon):
         self.version = version
         self.__dict__.update(kwargs)
         self.type = "Map Pack"
+
+
+class LiveThroughDoomMapPack(MapPack):
+
+    def __init__(self, name, version, **kwargs):
+        self.name = name
+        self.version = version
+        super(LiveThroughDoomMapPack, self).__init__(self.name, self.version)
+        self.__dict__.update(kwargs)
+        self.type = "Live Through Doom Map Pack"
 
 
 class XimStarWarsMapPack(MapPack):

@@ -224,13 +224,14 @@
         },
         {
             "name": "Brutal Doom Extended Edition",
-            "version": "20.1",
+            "version": "21.3",
             "url": "https://www.moddb.com/mods/brutal-doom-extended-edition",
             "allow_other": true,
             "contains_weapons": true,
             "files": [
                 "Brutal_Doom_Extended_Edition/Brutal_Doom_Extended_Edition.pk3",
                 "Brutal_Doom_Extended_Edition/Brutal_Doom_Extended_Edition_HXRTC_Hud.pk3",
+                "Brutal_Doom_Extended_Edition/Brutal_Doom_Extended_Edition_Addons/FlashlightPlusPlus.pk3",
                 "Brutal_Doom_Extended_Edition/Brutal_Doom_Extended_Edition_Addons/GearBox_Weapon_Wheel.pk3",
                 "Brutal_Doom_Extended_Edition/Brutal_Doom_Extended_Edition_Addons/Helmet_Mugshot.wad",
                 "Brutal_Doom_Extended_Edition/Brutal_Doom_Extended_Edition_Addons/Hit_Markers.pk3",
@@ -395,7 +396,8 @@
             "files": [
                 "LiTDOOM/LiTDOOM_0.595c.pk3",
                 "music/hellsamb.wad"
-            ]
+            ],
+            "allowed_map_packs": "live_through_doom_map_pack"
         },
         {
             "name": "Maps Of Chaos - Overkill",
@@ -455,6 +457,15 @@
             "contains_weapons": false,
             "files": [
                 "relighting_v4.0165b.pk3"
+            ]
+        },
+        {
+            "name": "Relite",
+            "version": "0.51a",
+            "url": "https://www.moddb.com/mods/relite",
+            "contains_weapons": false,
+            "files": [
+                "relite_0.5.1a.pk3"
             ]
         },
         {
@@ -605,6 +616,14 @@
             ]
         },
         {
+            "name": "Final Doom - Plutonia Experiment",
+            "version": "1.0",
+            "url": "",
+            "iwads": [
+                "PLUTONIA.WAD"
+            ]
+        },
+        {
             "name": "Final Doom - TNT: Evilution",
             "version": "1.0",
             "url": "",
@@ -619,14 +638,6 @@
             "files": [
                 "hellonearth/ExtraTextures.wad",
                 "hellonearth/hellonearthstarterpack.wad"
-            ]
-        },
-        {
-            "name": "Final Doom - Plutonia Experiment",
-            "version": "1.0",
-            "url": "",
-            "iwads": [
-                "PLUTONIA.WAD"
             ]
         },
         {
@@ -662,6 +673,40 @@
             "url": "https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/valve",
             "files": [
                 "valve.wad"
+            ]
+        }
+    ],
+    "live_through_doom_map_pack": [
+        {
+            "name": "Unfamiliar Trilogy",
+            "version": "3.2",
+            "url": "https://www.moddb.com/mods/unfamiliar-trilogy",
+            "files": [
+                "LiTDOOM/maps/UF_EP3.pk3"
+            ]
+        },
+        {
+            "name": "Hadephobia",
+            "version": "24th February 2013",
+            "url": "https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/h_phobia",
+            "files": [
+                "LiTDOOM/maps/h_phobia.wad"
+            ]
+        },
+        {
+            "name": "Dark Encounters",
+            "version": "Re-release/bugfix 2019",
+            "url": "https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/drkenctr",
+            "files": [
+                "Xim-StarWars/Maps/drkenctr.wad"
+            ]
+        },
+        {
+            "name": "Neo Doom (Levels)",
+            "version": "4",
+            "url": "https://www.moddb.com/mods/final-neodoom-levels-only/downloads/final-neodoom-levels-only",
+            "files": [
+                "fndoom_diet_BetaV4.pk3"
             ]
         }
     ],
