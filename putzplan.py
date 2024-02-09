@@ -16,6 +16,7 @@ cfg_laundry = Config(descr="Wä Klo Staub", cycle=1, color="8AFFB9")
 cfg_towel_exchange = Config(descr="Handtücher", cycle=2, color="FFCBA3")
 cfg_bedsheets_towels = Config(descr="Bett+Handtü", cycle=3, color="FFFF94")
 cfg_bathroom = Config(descr="Bad", cycle=3, color="FFADBB")
+cfg_bathroom_carpets = Config(descr="Badteppiche", cycle=9, color="53BCFF")
 
 
 def get_cleaning_plan_appointments(config: Config, start_date: str):
@@ -45,7 +46,13 @@ def get_date_as_datetime(month_and_day: str):
     return datetime(YEAR, month, day)
 
 
-@click.command()
+@click.command(help="""
+               Dieses Kommandozeilentool erzeugt benutzerdefinierte Einträge für
+               https://www.schulferien.org/kalender_drucken/monatskalender
+               zur Erstellung eines Putzplans für ein Kalenderjahr.
+               Beispiel zur Ausführung:\n
+               putzplan.py -y 2024 -wks 1,4 -h 1,4 -bh 1,18 -b 1,11 -bt 2,22
+               """)
 @click.option(
     "--year",
     "-y",
@@ -57,30 +64,37 @@ def get_date_as_datetime(month_and_day: str):
     "-wks",
     "startWaeKloSt",
     required=True,
-    help="[month, day] Monat, Tag an welchem Wäsche, Klo und Staubsaugen beginnen soll",
+    help="[month,day] Monat & Tag an welchem Wäsche, Klo und Staubsaugen beginnen soll",
 )
 @click.option(
     "--startHand",
     "-h",
     "startHand",
     required=True,
-    help="[month, day] Monat, Tag an welchem Handtücher tauschen beginnen soll",
+    help="[month,day] Monat & Tag an welchem Handtücher tauschen beginnen soll",
 )
 @click.option(
     "--startBettHand",
     "-bh",
     "startBettHand",
     required=True,
-    help="[month, day] Monat, Tag an welchem Bettwäsche und Handtücher waschen beginnen soll",
+    help="[month,day] Monat & Tag an welchem Bettwäsche und Handtücher waschen beginnen soll",
 )
 @click.option(
     "--startBad",
     "-b",
     "startBad",
     required=True,
-    help="[month, day] Monat, Tag an welchem Bad putzen beginnen soll",
+    help="[month,day] Monat & Tag an welchem Bad putzen beginnen soll",
 )
-def main(year, startWaeKloSt, startHand, startBettHand, startBad):
+@click.option(
+    "--startBadtepp",
+    "-bt",
+    "startBadTepp",
+    required=True,
+    help="[month,day] Monat & Tag an welchem Badteppiche waschen beginnen soll",
+)
+def main(year, startWaeKloSt, startHand, startBettHand, startBad, startBadTepp):
 
     global YEAR
     YEAR = int(year)
@@ -89,6 +103,7 @@ def main(year, startWaeKloSt, startHand, startBettHand, startBad):
     get_cleaning_plan_appointments(cfg_towel_exchange, startHand)
     get_cleaning_plan_appointments(cfg_bedsheets_towels, startBettHand)
     get_cleaning_plan_appointments(cfg_bathroom, startBad)
+    get_cleaning_plan_appointments(cfg_bathroom_carpets, startBadTepp)
 
 
 if __name__ == "__main__":
