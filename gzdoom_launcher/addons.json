@@ -3,6 +3,7 @@
         {
             "name": "Ashes Episode 1 - 2063",
             "version": "2.23",
+            "rating": 5,
             "url": "https://www.moddb.com/mods/ashes-2063",
             "files": [
                 "ashes/AshesSAMenu.pk3",
@@ -15,6 +16,7 @@
         {
             "name": "Ashes Episode 2 - Afterglow",
             "version": "1.10",
+            "rating": 5,
             "url": "https://www.moddb.com/mods/ashes-2063",
             "files": [
                 "ashes/AshesSAMenu.pk3",
@@ -26,6 +28,7 @@
         {
             "name": "Asterodead",
             "version": "20220924",
+            "rating": 3,
             "url": "https://www.moddb.com/mods/asterodead",
             "files": [
                 "ASTERODEAD_V20220924.pk3"
@@ -34,6 +37,7 @@
         {
             "name": "Blade Of Agony",
             "version": "3.1",
+            "rating": 5,
             "url": [
                 "https://www.moddb.com/mods/wolfendoom-blade-of-agony",
                 "https://github.com/Realm667/WolfenDoom"
@@ -46,6 +50,7 @@
         {
             "name": "Brutal Doom 64",
             "version": "2.5",
+            "rating": 4,
             "url": "https://www.moddb.com/mods/brutal-doom-64",
             "files": [
                 "Brutal_Doom_64/bd64game_v2.5.pk3",
@@ -55,6 +60,7 @@
         {
             "name": "Brutal Doom 64 v2.666",
             "version": "2.666",
+            "rating": 4,
             "url": [
                 "https://github.com/swc132994/BD64game_v2.666",
                 "https://github.com/swc132994/BD64maps_v2.666",
@@ -74,6 +80,7 @@
         {
             "name": "Brutal Heretic",
             "version": "5.0",
+            "rating": 4,
             "url": "https://nzdoom.net/printthread.php?tid=3",
             "iwads": [
                 "heretic.wad"
@@ -87,6 +94,7 @@
         {
             "name": "Brutal Hexen",
             "version": "7.5",
+            "rating": 4,
             "url": "https://nzdoom.net/showthread.php?tid=2",
             "iwads": [
                 "hexen.wad"
@@ -103,6 +111,7 @@
         {
             "name": "Brutal Wolfenstein 3D",
             "version": "7.0",
+            "rating": 5,
             "url": "https://www.moddb.com/mods/brutal-wolfenstein-3d",
             "files": [
                 "brutal_wolfenstein_3d/Brutal_Soundpack_Spear_of_Destiny_Edition.pk3",
@@ -112,6 +121,7 @@
         {
             "name": "Doom 64 CE",
             "version": "3.9.0.1",
+            "rating": 5,
             "url": "https://www.moddb.com/mods/doom-ce",
             "files": [
                 "DOOM64.CE-3.9.0.1/DOOM64.CE.ipk3",
@@ -132,6 +142,7 @@
         {
             "name": "Doom Infinite",
             "version": "0.978.6",
+            "rating": 3,
             "url": "https://www.moddb.com/mods/doom-infinite",
             "files": [
                 "DOOM_Infinite_DEMO_0978_6.pk3"
@@ -140,6 +151,7 @@
         {
             "name": "Golden Souls - Remastered",
             "version": "1.0",
+            "rating": 3,
             "url": "https://batandy.itch.io/goldensouls",
             "files": [
                 "GoldenSouls_Remastered_V1.0_hotfix.pk3"
@@ -148,6 +160,7 @@
         {
             "name": "Golden Souls 2",
             "version": "1.4",
+            "rating": 4,
             "url": "https://batandy.itch.io/goldensouls2",
             "files": [
                 "GoldenSouls2_1.4.pk3"
@@ -156,6 +169,7 @@
         {
             "name": "Pirate Doom",
             "version": "1.8.5",
+            "rating": 3,
             "url": "https://www.moddb.com/mods/pirate-doom",
             "files": [
                 "Pirates.wad"
@@ -164,6 +178,7 @@
         {
             "name": "Siren",
             "version": "0.81b",
+            "rating": 3,
             "url": "https://www.moddb.com/mods/siren-doom-tc",
             "files": [
                 "Siren_v0.81b.pk3"
@@ -172,6 +187,7 @@
         {
             "name": "Total Chaos",
             "version": "1.40",
+            "rating": 5,
             "url": "https://www.moddb.com/mods/total-chaos",
             "files": [
                 "total_chaos/totalchaos.pk3",
@@ -181,6 +197,7 @@
         {
             "name": "Venturous",
             "version": "1.3.4",
+            "rating": 4,
             "url": "https://forum.zdoom.org/viewtopic.php?t=78218",
             "files": [
                 "Venturous_1.3.4.pk3"
@@ -189,6 +206,7 @@
         {
             "name": "Wolfenstein X: Hearts of Liberty",
             "version": "Final",
+            "rating": 4,
             "url": "https://www.moddb.com/downloads/wolfenstein-x-hearts-of-liberty-final-edition-complete-edition",
             "files": [
                 "WolfensteinX_HeartsOfLibertyFinalEditionFix/WolfX_v2.pk3",
@@ -199,6 +217,7 @@
     "predefined_combination": [
         {
             "name": "Hexen HD",
+            "rating": 0,
             "iwads": [
                 "hexen.wad"
             ],
@@ -217,6 +236,7 @@
         {
             "name": "Atom Rain: X Protocol + Hell From Earth",
             "version": "1.2Hotfix",
+            "rating": 0,
             "url": [
                 "https://www.moddb.com/mods/atom-rain-x-protocol",
                 "https://www.moddb.com/mods/hell-from-earth"
@@ -231,6 +251,7 @@
         {
             "name": "Bloom (Doom/Blood crossover)",
             "version": "Final",
+            "rating": 0,
             "url": "https://www.moddb.com/mods/bloom-doomblood-crossover",
             "allow_other": false,
             "contains_weapons": true,
@@ -241,6 +262,7 @@
         {
             "name": "Brutal Doom (Community Expansion)",
             "version": "21.14.0",
+            "rating": 0,
             "url": "https://github.com/BLOODWOLF333/Brutal-Doom-Community-Expansion",
             "allow_other": true,
             "contains_weapons": true,
@@ -251,6 +273,7 @@
         {
             "name": "Brutal Doom Extended Edition",
             "version": "21.3",
+            "rating": 0,
             "url": "https://www.moddb.com/mods/brutal-doom-extended-edition",
             "allow_other": true,
             "contains_weapons": true,
@@ -269,6 +292,7 @@
         {
             "name": "Brutal Trailblazer",
             "version": "1.5e",
+            "rating": 0,
             "url": "https://forum.zdoom.org/viewtopic.php?t=56465&hilit=brutal+trailblazer",
             "contains_weapons": true,
             "files": [
@@ -280,6 +304,7 @@
         {
             "name": "Bullet Time X",
             "version": "1.2.0",
+            "rating": 0,
             "url": "https://www.moddb.com/games/doom-ii/addons/bullet-time-x",
             "files": [
                 "bullet-time-x.pk3"
@@ -288,6 +313,7 @@
         {
             "name": "Cody Cruikshank's Project Brutality",
             "version": "21",
+            "rating": 0,
             "url": "https://www.moddb.com/mods/cody-cruikshanks-project-brutality1",
             "files": [
                 "Cody_Cruikshanks_Project_brutality_21.pk3"
@@ -296,6 +322,7 @@
         {
             "name": "Dark Forces Music",
             "version": "Feb 14th, 2020",
+            "rating": 0,
             "url": "https://www.moddb.com/downloads/dark-forces-music-patch",
             "files": [
                 "music/DarkForcesMusicX.pk3"
@@ -304,6 +331,7 @@
         {
             "name": "DN3Doom (Duke Nukem Style)",
             "version": "1.07b",
+            "rating": 0,
             "url": "https://www.moddb.com/mods/dn3doom",
             "contains_weapons": true,
             "files": [
@@ -320,6 +348,7 @@
         {
             "name": "Doom Brutality Ultimate (Enhanced Project Brutality 3.0) - ABANDONED",
             "version": "1.3",
+            "rating": 0,
             "url": "https://www.moddb.com/mods/doom-brutality-ultimate",
             "files": [
                 "Doom_Brutality_Ultimate/1._Doom_Brutality_Ultimate.zip",
@@ -343,6 +372,7 @@
         {
             "name": "Doom Brutality Ultimate + Project Brutality Badass Edition Mods - ABANDONED",
             "version": "1.3",
+            "rating": 0,
             "url": "https://www.moddb.com/mods/doom-brutality-ultimate",
             "files": [
                 "Doom_Brutality_Ultimate/1._Doom_Brutality_Ultimate.zip",
@@ -377,6 +407,7 @@
         {
             "name": "Doom Enhanced",
             "version": "Aug 15th, 2022",
+            "rating": 0,
             "url": "https://www.moddb.com/mods/doom-enhancement-project/addons",
             "files": [
                 "doom_enhanced/CustomSounds.pk3",
@@ -388,6 +419,7 @@
         {
             "name": "Hellrider",
             "version": "0.9c",
+            "rating": 0,
             "url": "https://forum.zdoom.org/viewtopic.php?f=43&t=68575",
             "contains_weapons": true,
             "files": [
@@ -398,6 +430,7 @@
         {
             "name": "High Quality PSX Music (Slow, Gloomy)",
             "version": "Jun 9th, 2015",
+            "rating": 0,
             "url": "https://www.moddb.com/games/doom-ii/addons/psx-soundtrack-replacement-high-quality",
             "files": [
                 "music/HQPSXMUS.WAD"
@@ -406,6 +439,7 @@
         {
             "name": "Lambda Strike",
             "version": "1.0.5",
+            "rating": 0,
             "url": "https://www.moddb.com/mods/lambda-strike",
             "contains_weapons": true,
             "files": [
@@ -417,6 +451,7 @@
         {
             "name": "Live Through Doom",
             "version": "0.595c",
+            "rating": 0,
             "url": "https://forum.zdoom.org/viewtopic.php?t=68573",
             "contains_weapons": true,
             "files": [
@@ -428,6 +463,7 @@
         {
             "name": "Maps Of Chaos - Overkill",
             "version": "1.28a",
+            "rating": 0,
             "url": "https://www.moddb.com/mods/brutal-doom/addons/brutalized-doom-and-doom-ii/page/8",
             "files": [
                 "mapsofchaos-ok.wad"
@@ -436,6 +472,7 @@
         {
             "name": "Painkiller Mutilator (Enemies & Weapons)",
             "version": "1.7",
+            "rating": 0,
             "url": "https://www.moddb.com/mods/painkiller-for-doom",
             "contains_weapons": true,
             "files": [
@@ -446,6 +483,7 @@
         {
             "name": "Project Brutality (Badass Edition - incl. other mods) - OUTDATED, ABANDONED",
             "version": "2.0",
+            "rating": 0,
             "url": "https://www.moddb.com/mods/project-brutality",
             "contains_weapons": true,
             "files": [
@@ -470,6 +508,7 @@
         {
             "name": "Project Brutality",
             "version": "October 13th 2023",
+            "rating": 0,
             "url": "https://github.com/pa1nki113r/Project_Brutality/tree/popguy12-PB%26J",
             "contains_weapons": true,
             "files": [
@@ -479,6 +518,7 @@
         {
             "name": "Relightning",
             "version": "4.0165b",
+            "rating": 0,
             "url": "https://www.moddb.com/mods/relighting",
             "contains_weapons": false,
             "files": [
@@ -488,6 +528,7 @@
         {
             "name": "Relite",
             "version": "0.6.7a",
+            "rating": 0,
             "url": "https://www.moddb.com/mods/relite",
             "contains_weapons": false,
             "files": [
@@ -497,6 +538,7 @@
         {
             "name": "Terrorists!",
             "version": "February 10th, 2013",
+            "rating": 0,
             "url": [
                 "https://www.doomworld.com/idgames/combos/ww-trror"
             ],
@@ -507,6 +549,7 @@
         {
             "name": "Voxel Doom II (for Doom & Doom 2)",
             "version": "2.3",
+            "rating": 0,
             "url": "https://www.moddb.com/mods/voxel-doom-ii",
             "contains_weapons": true,
             "files": [
@@ -516,6 +559,7 @@
         {
             "name": "Wolf3Doom",
             "version": "1.0",
+            "rating": 0,
             "url": "https://www.moddb.com/mods/wolf3doom",
             "contains_weapons": true,
             "files": [
@@ -526,6 +570,7 @@
         {
             "name": "Woomy: Project Petersen",
             "version": "3.2",
+            "rating": 0,
             "url": "https://www.moddb.com/mods/woomy-project-petersen",
             "contains_weapons": true,
             "files": [
@@ -537,6 +582,7 @@
         {
             "name": "Xim's GZDoom3 for Classic Doom",
             "version": "2.4",
+            "rating": 0,
             "url": "https://www.moddb.com/mods/xims-gzdoom3-for-classic-doom",
             "files": [
                 "Xim-Doom3-gzdoom-v2.4.5/Xim-Doom3-enemies.pk3",
@@ -549,6 +595,7 @@
         {
             "name": "Xim's Star Wars",
             "version": "3.1.4",
+            "rating": 0,
             "url": "https://www.moddb.com/mods/xims-star-wars-doom",
             "files": [
                 "Xim-StarWars/Xim-StarWars-v3.1.4.pk3",
@@ -564,6 +611,7 @@
         {
             "name": "Ashes 2063 Weapons",
             "version": "2.23",
+            "rating": 0,
             "url": "https://www.moddb.com/mods/ashes-2063",
             "files": [
                 "ashes/AshesWeaponsV2_223.pk3"
@@ -572,6 +620,7 @@
         {
             "name": "Call Of Doom - Black Warfare (Brutal Doom Version)",
             "version": "2-Z",
+            "rating": 0,
             "url": "https://www.moddb.com/mods/call-of-doom-cod-style-advanced-weapons-mod",
             "files": [
                 "CODBW_v2Z/ZZD_CODBW_FileA_BrutalDoom.pk3",
@@ -582,6 +631,7 @@
         {
             "name": "Doom Tournament + Doomreal",
             "version": "1.2",
+            "rating": 0,
             "url": "https://forum.zdoom.org/viewtopic.php?t=60759",
             "files": [
                 "doom_tournament/flak_m.pk3",
@@ -592,6 +642,7 @@
         {
             "name": "Painkiller Mutilator",
             "version": "1.7",
+            "rating": 0,
             "url": "https://www.moddb.com/mods/painkiller-for-doom",
             "files": [
                 "painkiller_mutilator/Painkiller_Weapons_3D.pk3"
@@ -602,6 +653,7 @@
         {
             "name": "Auger;Zenith",
             "version": "July 23rd, 2021",
+            "rating": 0,
             "url": "https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/dbp37_augzen",
             "files": [
                 "DBP37_AUGZEN.wad"
@@ -610,6 +662,7 @@
         {
             "name": "Bloodline",
             "version": "Jan 26 2023",
+            "rating": 0,
             "url": "https://www.moddb.com/mods/bloodline-wad",
             "files": [
                 "Bloodline.wad"
@@ -618,6 +671,7 @@
         {
             "name": "Doom",
             "version": "1.0",
+            "rating": 0,
             "url": "",
             "iwads": [
                 "doom.wad"
@@ -626,6 +680,7 @@
         {
             "name": "Doom 2",
             "version": "1.0",
+            "rating": 0,
             "url": "",
             "iwads": [
                 "doom2.wad"
@@ -634,6 +689,7 @@
         {
             "name": "Doom 2 - Master Levels",
             "version": "1.0",
+            "rating": 0,
             "url": "",
             "files": [
                 "DOOM2_THE_MASTER_LEVELS.pk3"
@@ -642,6 +698,7 @@
         {
             "name": "Doom 2 - No Rest for the Living",
             "version": "1.0",
+            "rating": 0,
             "url": "",
             "files": [
                 "NERVE.wad"
@@ -650,6 +707,7 @@
         {
             "name": "Doom Slayer Chronicles (NOT WORKING, WAIT FOR NEXT RELEASE)",
             "version": "1.0.2",
+            "rating": 0,
             "url": "https://www.moddb.com/mods/doom-slayer-chronicles",
             "files": [
                 "Doom_Slayer_Chronicles/DSC-1.0.2.pk3",
@@ -659,6 +717,7 @@
         {
             "name": "Dragon Sektor Remake",
             "version": "0.62",
+            "rating": 0,
             "url": "https://www.moddb.com/mods/dragon-sector-the-remake",
             "files": [
                 "dragon-sector-remake-v0.62.pk3"
@@ -667,6 +726,7 @@
         {
             "name": "Eviternity",
             "version": "Final",
+            "rating": 0,
             "url": "https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/eviternity",
             "files": [
                 "Eviternity.wad"
@@ -675,6 +735,7 @@
         {
             "name": "Eviternity 2",
             "version": "RC5",
+            "rating": 0,
             "url": "https://eviternity.dfdoom.com/",
             "files": [
                 "Eviternity_II_RC5.wad"
@@ -683,6 +744,7 @@
         {
             "name": "Final Doom - Plutonia Experiment",
             "version": "1.0",
+            "rating": 0,
             "url": "",
             "iwads": [
                 "PLUTONIA.WAD"
@@ -691,6 +753,7 @@
         {
             "name": "Final Doom - TNT: Evilution",
             "version": "1.0",
+            "rating": 0,
             "url": "",
             "iwads": [
                 "TNT.WAD"
@@ -699,6 +762,7 @@
         {
             "name": "Hell On Earth Starter Pack",
             "version": "Jan 1st, 2016",
+            "rating": 0,
             "url": "https://www.moddb.com/mods/recurring-nightmare",
             "files": [
                 "hellonearth/ExtraTextures.wad",
@@ -708,6 +772,7 @@
         {
             "name": "Running Late 2",
             "version": "01/01/2020",
+            "rating": 0,
             "url": "https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/rl2",
             "files": [
                 "RL2.wad"
@@ -716,6 +781,7 @@
         {
             "name": "Sigil a.k.a. Doom - Episode 5",
             "version": "1.21",
+            "rating": 0,
             "url": "https://romero.com/sigil",
             "files": [
                 "SIGIL_v1_21.wad"
@@ -727,6 +793,7 @@
         {
             "name": "Sigil II a.k.a. Doom - Episode 6",
             "version": "1.0",
+            "rating": 0,
             "url": "https://romero.com/sigil",
             "files": [
                 "SIGIL_II_V1_0.WAD"
@@ -738,6 +805,7 @@
         {
             "name": "UAC Ultra",
             "version": "1.2",
+            "rating": 0,
             "url": "https://www.doomworld.com/idgames/levels/doom2/Ports/s-u/uacultra",
             "files": [
                 "uacultra.wad"
@@ -746,6 +814,7 @@
         {
             "name": "Valiant: Vaccinated Edition",
             "version": "December 3rd, 2015",
+            "rating": 0,
             "url": "https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/valve",
             "files": [
                 "valve.wad"
@@ -756,6 +825,7 @@
         {
             "name": "Unfamiliar Trilogy",
             "version": "3.2",
+            "rating": 0,
             "url": "https://www.moddb.com/mods/unfamiliar-trilogy",
             "files": [
                 "LiTDOOM/maps/UF_EP3.pk3"
@@ -764,6 +834,7 @@
         {
             "name": "Hadephobia",
             "version": "24th February 2013",
+            "rating": 0,
             "url": "https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/h_phobia",
             "files": [
                 "LiTDOOM/maps/h_phobia.wad"
@@ -772,6 +843,7 @@
         {
             "name": "Dark Encounters",
             "version": "Re-release/bugfix 2019",
+            "rating": 0,
             "url": "https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/drkenctr",
             "files": [
                 "Xim-StarWars/Maps/drkenctr.wad"
@@ -780,6 +852,7 @@
         {
             "name": "Neo Doom (Levels)",
             "version": "4",
+            "rating": 0,
             "url": "https://www.moddb.com/mods/final-neodoom-levels-only/downloads/final-neodoom-levels-only",
             "files": [
                 "fndoom_diet_BetaV4.pk3"
@@ -790,6 +863,7 @@
         {
             "name": "Back to Saturn X - Episode 1",
             "version": "1.1.6",
+            "rating": 0,
             "url": "https://www.moddb.com/mods/back-to-saturn-x",
             "files": [
                 "Xim-StarWars/Maps/btsx_e1/btsx_e1a.wad",
@@ -799,6 +873,7 @@
         {
             "name": "Back to Saturn X - Episode 2",
             "version": "1.0.1",
+            "rating": 0,
             "url": "https://www.moddb.com/mods/back-to-saturn-x",
             "files": [
                 "Xim-StarWars/Maps/btsx_e2/btsx_e2a.wad",
@@ -808,6 +883,7 @@
         {
             "name": "Back to Saturn X - Episode 3",
             "version": "Preview",
+            "rating": 0,
             "url": "https://www.doomworld.com/forum/topic/104557-back-to-saturn-x-episode-3-wip-5-map-preview-build-on-page-11/",
             "files": [
                 "Xim-StarWars/Maps/BTSXE3PR.wad"
@@ -816,6 +892,7 @@
         {
             "name": "Dark Hour",
             "version": "2001.08.06",
+            "rating": 0,
             "url": "https://www.doomworld.com/idgames/levels/doom2/Ports/d-f/darkhour",
             "files": [
                 "Xim-StarWars/Patches/Xim-StarWarsDarkHour.pk3",
@@ -825,6 +902,7 @@
         {
             "name": "Going Down",
             "version": "2014.02.14",
+            "rating": 0,
             "url": "https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/gd",
             "files": [
                 "Xim-StarWars/Maps/gd.wad"
@@ -833,6 +911,7 @@
         {
             "name": "Spacwars",
             "version": "2015.09.01",
+            "rating": 0,
             "url": "https://www.doomworld.com/idgames/levels/doom2/Ports/s-u/spacwars",
             "files": [
                 "Xim-StarWars/Patches/Xim-StarWarsSpacwars.pk3",
@@ -842,6 +921,7 @@
         {
             "name": "Dark Encounters",
             "version": "Re-release/bugfix 2019",
+            "rating": 0,
             "url": "https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/drkenctr",
             "files": [
                 "Xim-StarWars/Maps/drkenctr.wad"

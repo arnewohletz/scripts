@@ -89,22 +89,34 @@ def print_addons(addons_tuple) -> None:
     for i, addon in enumerate(addons_tuple):
         if hasattr(addon, "version"):
             print(f"{' '*(3 - len(str(i)))}[{i}] {addon.name} "
-                  f"(v{addon.version})")
+                  f"(v{addon.version}) "
+                  f"{addon.rating * '\N{LARGE GREEN CIRCLE}'}"
+                  f"{(5 - addon.rating) * '\N{LARGE RED CIRCLE}'}")
         else:
-            print(f"{' '*(3 - len(str(i)))}[{i}] {addon.name}")
+            print(f"{' '*(3 - len(str(i)))}[{i}] {addon.name} "
+                  f"{addon.rating * '\N{LARGE GREEN CIRCLE}'}"
+                  f"{(5 - addon.rating) * '\N{LARGE RED CIRCLE}'}")
 
 
-class AutonomousAddon(object):
+class Addon(object):
 
     def __init__(self):
+        pass
+
+
+class AutonomousAddon(Addon):
+
+    def __init__(self):
+        super(AutonomousAddon, self).__init__()
         self.allows_more_current_type = False
         self.contains_weapons = True
         self.iwads = ["doom2.wad"]
 
 
-class ExtendingAddon(object):
+class ExtendingAddon(Addon):
 
     def __init__(self):
+        super(ExtendingAddon, self).__init__()
         self.allows_more_current_type = True
         self.contains_weapons = False
         self.allowed_map_packs = MapPack
@@ -112,10 +124,8 @@ class ExtendingAddon(object):
 
 class TotalConversion(AutonomousAddon):
 
-    def __init__(self, name, version, files, **kwargs):
+    def __init__(self, files, **kwargs):
         super(TotalConversion, self).__init__()
-        self.name = name
-        self.version = version
         self.files = files
         self.__dict__.update(kwargs)
         self.type = "Total Conversion"
@@ -123,9 +133,8 @@ class TotalConversion(AutonomousAddon):
 
 class PredefinedCombination(AutonomousAddon):
 
-    def __init__(self, name, files, **kwargs):
+    def __init__(self, files, **kwargs):
         super(PredefinedCombination, self).__init__()
-        self.name = name
         self.files = files
         self.__dict__.update(kwargs)
         self.type = "Predefined Combination"
@@ -133,10 +142,8 @@ class PredefinedCombination(AutonomousAddon):
 
 class Gameplay(ExtendingAddon):
 
-    def __init__(self, name, version, files, **kwargs):
+    def __init__(self, files, **kwargs):
         super(Gameplay, self).__init__()
-        self.name = name
-        self.version = version
         self.files = files
         self.__dict__.update(kwargs)
         self.type = "Gameplay Mod"
@@ -144,10 +151,8 @@ class Gameplay(ExtendingAddon):
 
 class WeaponPack(ExtendingAddon):
 
-    def __init__(self, name, version, files, **kwargs):
+    def __init__(self, files, **kwargs):
         super(WeaponPack, self).__init__()
-        self.name = name
-        self.version = version
         self.files = files
         self.__dict__.update(kwargs)
         self.type = "Weapon Pack"
@@ -155,30 +160,24 @@ class WeaponPack(ExtendingAddon):
 
 class MapPack(ExtendingAddon):
 
-    def __init__(self, name, version, **kwargs):
+    def __init__(self, **kwargs):
         super(MapPack, self).__init__()
-        self.name = name
-        self.version = version
         self.__dict__.update(kwargs)
         self.type = "Map Pack"
 
 
 class LiveThroughDoomMapPack(MapPack):
 
-    def __init__(self, name, version, **kwargs):
-        self.name = name
-        self.version = version
-        super(LiveThroughDoomMapPack, self).__init__(self.name, self.version)
+    def __init__(self, **kwargs):
+        super(LiveThroughDoomMapPack, self).__init__()
         self.__dict__.update(kwargs)
         self.type = "Live Through Doom Map Pack"
 
 
 class XimStarWarsMapPack(MapPack):
 
-    def __init__(self, name, version, **kwargs):
-        self.name = name
-        self.version = version
-        super(XimStarWarsMapPack, self).__init__(self.name, self.version)
+    def __init__(self, **kwargs):
+        super(XimStarWarsMapPack, self).__init__()
         self.__dict__.update(kwargs)
         self.type = "Xim Star Wars Map Pack"
 
