@@ -1,0 +1,7 @@
+#! /bin/zsh
+
+source ~/.pyenv/versions/gog_repo/bin/activate
+
+cd ~/Documents/gogrepo-master/
+python gogrepo.py update -os windows linux mac -l en
+python gogrepo.py download /Volumes/GOG_GAMES
