@@ -8,7 +8,8 @@
                 "ashes/AshesSAMenu.pk3",
                 "ashes/Ashes2063Enriched2_23.pk3",
                 "ashes/Ashes2063EnrichedFDPatch.pk3",
-                "ashes/Ashes2063_NeuralUpscale.pk3"
+                "ashes/Ashes2063_NeuralUpscale.pk3",
+                "ashes/AshesVoxelPickups-Ep1.pk3"
             ]
         },
         {
@@ -18,7 +19,8 @@
             "files": [
                 "ashes/AshesSAMenu.pk3",
                 "ashes/AshesAfterglow1_10.pk3",
-                "ashes/AshesAfterGlow_NeuralPack.pk3"
+                "ashes/AshesAfterGlow_NeuralPack.pk3",
+                "ashes/AshesVoxelPickups-Ep2.pk3"
             ]
         },
         {
@@ -109,22 +111,30 @@
         },
         {
             "name": "Doom 64 CE",
-            "version": "3.7.1.2",
+            "version": "3.9.0.1",
             "url": "https://www.moddb.com/mods/doom-ce",
             "files": [
-                "DOOM64.CE-3.7.1.2/DOOM64.CE.ipk3",
-                "DOOM64.CE-3.7.1.2/DOOM64.CE.Maps.LostLevels.pk3",
-                "DOOM64.CE-3.7.1.2/DOOM64.CE.Addon.BGM.Extended.pk3",
-                "DOOM64.CE-3.7.1.2/DOOM64.CE.Addon.GFX.Brightmaps.pk3",
-                "DOOM64.CE-3.7.1.2/DOOM64.CE.Addon.GFX.Decals.pk3",
-                "DOOM64.CE-3.7.1.2/DOOM64.CE.Addon.GFX.Extra.pk3",
-                "DOOM64.CE-3.7.1.2/DOOM64.CE.Addon.GFX.Parallax.pk3",
-                "DOOM64.CE-3.7.1.2/DOOM64.CE.Addon.GFX.PBR.pk3",
-                "DOOM64.CE-3.7.1.2/DOOM64.CE.Addon.GFX.Upscale.pk3",
-                "DOOM64.CE-3.7.1.2/DOOM64.CE.Addon.SFX.HQ.pk3"
+                "DOOM64.CE-3.9.0.1/DOOM64.CE.ipk3",
+                "DOOM64.CE-3.9.0.1/DOOM64.CE.Maps.LostLevels.pk3",
+                "DOOM64.CE-3.9.0.1/DOOM64.CE.Addon.BGM.Extended.pk3",
+                "DOOM64.CE-3.9.0.1/DOOM64.CE.Addon.GFX.Brightmaps.pk3",
+                "DOOM64.CE-3.9.0.1/DOOM64.CE.Addon.GFX.Decals.pk3",
+                "DOOM64.CE-3.9.0.1/DOOM64.CE.Addon.GFX.Extra.pk3",
+                "DOOM64.CE-3.9.0.1/DOOM64.CE.Addon.GFX.Parallax.pk3",
+                "DOOM64.CE-3.9.0.1/DOOM64.CE.Addon.GFX.PBR.pk3",
+                "DOOM64.CE-3.9.0.1/DOOM64.CE.Addon.GFX.Upscale.pk3",
+                "DOOM64.CE-3.9.0.1/DOOM64.CE.Addon.SFX.HQ.pk3"
             ],
             "iwads": [
-                "DOOM64.CE-3.7.1.2/DOOM64.IWAD"
+                "DOOM64.CE-3.9.0.1/DOOM64.IWAD"
+            ]
+        },
+        {
+            "name": "Doom Infinite",
+            "version": "0.978.6",
+            "url": "https://www.moddb.com/mods/doom-infinite",
+            "files": [
+                "DOOM_Infinite_DEMO_0978_6.pk3"
             ]
         },
         {
@@ -137,7 +147,7 @@
         },
         {
             "name": "Golden Souls 2",
-            "version": "0.6.1",
+            "version": "1.4",
             "url": "https://batandy.itch.io/goldensouls2",
             "files": [
                 "GoldenSouls2_1.4.pk3"
@@ -152,12 +162,28 @@
             ]
         },
         {
+            "name": "Siren",
+            "version": "0.81b",
+            "url": "https://www.moddb.com/mods/siren-doom-tc",
+            "files": [
+                "Siren_v0.81b.pk3"
+            ]
+        },
+        {
             "name": "Total Chaos",
             "version": "1.40",
             "url": "https://www.moddb.com/mods/total-chaos",
             "files": [
                 "total_chaos/totalchaos.pk3",
                 "total_chaos/zd_extra.pk3 +set gl_precache 1"
+            ]
+        },
+        {
+            "name": "Venturous",
+            "version": "1.3.4",
+            "url": "https://forum.zdoom.org/viewtopic.php?t=78218",
+            "files": [
+                "Venturous_1.3.4.pk3"
             ]
         },
         {
@@ -190,16 +216,16 @@
     "gameplay_mod": [
         {
             "name": "Atom Rain: X Protocol + Hell From Earth",
-            "version": "1.1",
+            "version": "1.2Hotfix",
             "url": [
-                "https://www.moddb.com/mods/atom-rain-x-protoc  ol",
+                "https://www.moddb.com/mods/atom-rain-x-protocol",
                 "https://www.moddb.com/mods/hell-from-earth"
             ],
             "allow_other": false,
             "contains_weapons": true,
             "files": [
                 "MACE-ARXP_V1.1A.pk3",
-                "HFE_v1.1.pk3"
+                "HFE_V1.2Hotfix.pk3"
             ]
         },
         {
@@ -253,7 +279,7 @@
         },
         {
             "name": "Bullet Time X",
-            "version": "111.1",
+            "version": "1.2.0",
             "url": "https://www.moddb.com/games/doom-ii/addons/bullet-time-x",
             "files": [
                 "bullet-time-x.pk3"
@@ -261,10 +287,10 @@
         },
         {
             "name": "Cody Cruikshank's Project Brutality",
-            "version": "1.11",
+            "version": "21",
             "url": "https://www.moddb.com/mods/cody-cruikshanks-project-brutality1",
             "files": [
-                "Cody_Cruikshanks_Project_brutality_11.pk3"
+                "Cody_Cruikshanks_Project_brutality_21.pk3"
             ]
         },
         {
@@ -443,8 +469,8 @@
         },
         {
             "name": "Project Brutality",
-            "version": "August 28th 2023",
-            "url": "https://github.com/pa1nki113r/Project_Brutality",
+            "version": "October 13th 2023",
+            "url": "https://github.com/pa1nki113r/Project_Brutality/tree/popguy12-PB%26J",
             "contains_weapons": true,
             "files": [
                 "Project_Brutality-popguy12-PB-J.zip"
@@ -461,20 +487,30 @@
         },
         {
             "name": "Relite",
-            "version": "0.51a",
+            "version": "0.6.7a",
             "url": "https://www.moddb.com/mods/relite",
             "contains_weapons": false,
             "files": [
-                "relite_0.5.1a.pk3"
+                "relite_0.6.7a.pk3"
             ]
         },
         {
-            "name": "Voxel Doom II",
-            "version": "2.1",
+            "name": "Terrorists!",
+            "version": "February 10th, 2013",
+            "url": [
+                "https://www.doomworld.com/idgames/combos/ww-trror"
+            ],
+            "files": [
+                "ww-terror.pk3"
+            ]
+        },
+        {
+            "name": "Voxel Doom II (for Doom & Doom 2)",
+            "version": "2.3",
             "url": "https://www.moddb.com/mods/voxel-doom-ii",
             "contains_weapons": true,
             "files": [
-                "cheello_voxels_v2_1.pk3"
+                "VoxelDoom_v_2.3.pk3"
             ]
         },
         {
@@ -489,7 +525,7 @@
         },
         {
             "name": "Woomy: Project Petersen",
-            "version": "3.1",
+            "version": "3.2",
             "url": "https://www.moddb.com/mods/woomy-project-petersen",
             "contains_weapons": true,
             "files": [
@@ -499,11 +535,23 @@
             ]
         },
         {
+            "name": "Xim's GZDoom3 for Classic Doom",
+            "version": "2.4",
+            "url": "https://www.moddb.com/mods/xims-gzdoom3-for-classic-doom",
+            "files": [
+                "Xim-Doom3-gzdoom-v2.4.5/Xim-Doom3-enemies.pk3",
+                "Xim-Doom3-gzdoom-v2.4.5/Xim-Doom3-props-3d.pk3",
+                "Xim-Doom3-gzdoom-v2.4.5/Xim-Doom3-props.pk3",
+                "Xim-Doom3-gzdoom-v2.4.5/Xim-Doom3-weapons.pk3",
+                "Xim-Doom3-gzdoom-v2.4.5/Xim-Doom3-world.pk3"
+            ]
+        },
+        {
             "name": "Xim's Star Wars",
-            "version": "3.1.2",
+            "version": "3.1.4",
             "url": "https://www.moddb.com/mods/xims-star-wars-doom",
             "files": [
-                "Xim-StarWars/Xim-StarWars-v3.1.2.pk3",
+                "Xim-StarWars/Xim-StarWars-v3.1.4.pk3",
                 "Xim-StarWars/Xim-StarWarsProps.pk3",
                 "Xim-StarWars/AddOns/Xim-DarkForcesHUD.pk3",
                 "Xim-StarWars/Xim-StarWarsTextures-v2.2.pk3",
@@ -523,11 +571,12 @@
         },
         {
             "name": "Call Of Doom - Black Warfare (Brutal Doom Version)",
-            "version": "2.0",
+            "version": "2-Z",
             "url": "https://www.moddb.com/mods/call-of-doom-cod-style-advanced-weapons-mod",
             "files": [
-                "call_of_doom/CODBW_FileA_Brutal_v2.pk3",
-                "call_of_doom/CODBW_FileB_HD_v2.pk3"
+                "CODBW_v2Z/ZZD_CODBW_FileA_BrutalDoom.pk3",
+                "CODBW_v2Z/ZZD_CODBW_FileB_HDgraphics.wad",
+                "CODBW_v2Z/ZZD_CODBW_FileC_MainData.wad"
             ]
         },
         {
@@ -609,10 +658,26 @@
         },
         {
             "name": "Dragon Sektor Remake",
-            "version": "0.61",
+            "version": "0.62",
             "url": "https://www.moddb.com/mods/dragon-sector-the-remake",
             "files": [
-                "dragon-sector-remake-v0.61.pk3"
+                "dragon-sector-remake-v0.62.pk3"
+            ]
+        },
+        {
+            "name": "Eviternity",
+            "version": "Final",
+            "url": "https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/eviternity",
+            "files": [
+                "Eviternity.wad"
+            ]
+        },
+        {
+            "name": "Eviternity 2",
+            "version": "RC5",
+            "url": "https://eviternity.dfdoom.com/",
+            "files": [
+                "Eviternity_II_RC5.wad"
             ]
         },
         {
@@ -654,6 +719,17 @@
             "url": "https://romero.com/sigil",
             "files": [
                 "SIGIL_v1_21.wad"
+            ],
+            "iwads": [
+                "doom.wad"
+            ]
+        },
+        {
+            "name": "Sigil II a.k.a. Doom - Episode 6",
+            "version": "1.0",
+            "url": "https://romero.com/sigil",
+            "files": [
+                "SIGIL_II_V1_0.WAD"
             ],
             "iwads": [
                 "doom.wad"
