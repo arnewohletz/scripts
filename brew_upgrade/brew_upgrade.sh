@@ -11,7 +11,7 @@ if [ ! -d "$log_dir" ]; then
 fi
 
 touch "$log_file"
-/opt/homebrew/bin/brew upgrade >"$log_file" 2>&1
+/usr/local/bin/brew upgrade >"$log_file" 2>&1
 
 msg=$(/usr/local/bin/pcregrep -o1 -o2 --om-separator=' ' "$update_version_regex" "$log_file")
 
