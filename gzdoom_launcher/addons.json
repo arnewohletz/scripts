@@ -299,7 +299,7 @@
             ]
         },
         {
-            "name": "Cody Cruikshank's Project Brutality (CURRENTLY NOT WORKING)",
+            "name": "Cody Cruikshank's Project Brutality",
             "version": "25",
             "rating": 4,
             "url": "https://www.moddb.com/mods/cody-cruikshanks-project-brutality1",
@@ -318,7 +318,7 @@
         },
         {
             "name": "DN3Doom (Duke Nukem Style)",
-            "version": "1.07b",
+            "version": "1.08c",
             "rating": 5,
             "url": "https://www.moddb.com/mods/dn3doom",
             "contains_weapons": true,
@@ -385,9 +385,10 @@
             "url": "https://forum.zdoom.org/viewtopic.php?t=68573",
             "contains_weapons": true,
             "files": [
-                "LiTDOOM/LiTDOOM_0.595c.pk3",
-                "music/hellsamb.wad"
+                "music/hellsamb.wad",
+                "LiTDOOM/LiTDOOM_0.595c.pk3"
             ],
+            "config": "LiTDOOM/lit_config.ini",
             "allowed_map_packs": "live_through_doom_map_pack"
         },
         {
@@ -608,6 +609,15 @@
                 "Project_Brutality-popguy12-PB-J.zip",
                 "dragon-sector-remake/KAI-main.pk3",
                 "dragon-sector-remake/dragon-sector-remake-v0.65.pk3"
+            ]
+        },
+        {
+            "name": "Elementalism - Phase 1",
+            "version": "1.3",
+            "rating": 0,
+            "url": "https://www.doomworld.com/forum/topic/100102-elementalism-an-ambitious-new-gzdoom-mapset-phase-1-out-now/",
+            "files": [
+                "maps/Elementalism_Phase1_Full_Release_v1.3.pk3"
             ]
         },
         {

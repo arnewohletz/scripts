@@ -63,8 +63,8 @@ class Launcher:
                     self.command += f" -file {ROOT_DIR + file}"
             if hasattr(addon, "allowed_map_packs"):
                 print(addon.allowed_map_packs)
-                with open(os.path.dirname(__file__) + "/addons.json", "r"
-                ) as file:
+                with open(os.path.dirname(__file__)
+                          + "/addons.json", "r") as file:
                     if addon.allowed_map_packs == "live_through_doom_map_pack":
                         self.allowed_map_packs = \
                             self.live_through_doom_map_pack
