@@ -1,4 +1,14 @@
 {
+    "gzdoom_version": [
+        {
+            "name": "default",
+            "path": "/Applications/GZDoom.app/Contents/MacOS/gzdoom"
+        },
+        {
+            "name": "4.11",
+            "path": "/Applications/GZDoom_4.11.app/Contents/MacOS/gzdoom"
+        }
+    ],
     "total_conversion": [
         {
             "name": "Ashes Episode 1 - 2063",
@@ -14,7 +24,18 @@
             ]
         },
         {
-            "name": "Ashes Episode 2 - Afterglow",
+            "name": "Ashes Episode 2 Prequel - Hard Reset",
+            "version": "1.00a",
+            "rating": 5,
+            "url": "https://www.moddb.com/mods/ashes-2063",
+            "files": [
+                "ashes/AshesSAMenu.pk3",
+                "ashes/AshesHardReset_1_00a.pk3",
+                "ashes/AshesAfterGlow_NeuralPack.pk3"
+            ]
+        },
+        {
+            "name": "Ashes Episode 2 - Afterglow v1.10",
             "version": "1.10",
             "rating": 5,
             "url": "https://www.moddb.com/mods/ashes-2063",
@@ -26,15 +47,38 @@
             ]
         },
         {
-            "name": "Blade Of Agony",
-            "version": "3.1",
+            "name": "Ashes Episode 2 - Afterglow",
+            "version": "1.16",
+            "rating": 5,
+            "url": "https://www.moddb.com/mods/ashes-2063",
+            "files": [
+                "ashes/AshesSAMenu.pk3",
+                "ashes/AshesAfterglow1_16.pk3",
+                "ashes/AshesAfterGlow_NeuralPack.pk3",
+                "ashes/AshesVoxelPickups-Ep2.pk3"
+            ]
+        },
+        {
+            "name": "Blade Of Agony (master) - requires GZDoom 4.12+",
+            "version": "Aug 5, 2024",
             "rating": 5,
             "url": [
-                "https://www.moddb.com/mods/wolfendoom-blade-of-agony",
                 "https://github.com/Realm667/WolfenDoom"
             ],
             "iwads": [
                 "WolfenDoom-master.zip"
+            ],
+            "files": []
+        },
+        {
+            "name": "Blade Of Agony - requires GZDoom 4.11",
+            "version": "3.1",
+            "rating": 5,
+            "url": [
+                "https://github.com/Realm667/WolfenDoom"
+            ],
+            "iwads": [
+                "boa.ipk3"
             ],
             "files": []
         },
@@ -45,22 +89,23 @@
             "url": [
                 "https://github.com/swc132994/BD64game_v2.666",
                 "https://github.com/swc132994/BD64maps_v2.666",
-                "https://www.moddb.com/mods/brutal-doom-64/addons/specific-sound-pack-for-brutal-doom-64-v2666"
+                "https://www.moddb.com/mods/brutal-doom-64/addons/specific-sndpack-bd64v2666-monsters-misc-update",
+                "https://mega.nz/folder/o9xXjIoI#9aAg_qIoa6tqpfHKKK-Hjw"
             ],
             "files": [
                 "Brutal_Doom_64_v2.666/BD64game_v2.666-main.zip",
                 "Brutal_Doom_64_v2.666/BD64maps_v2.666-main.zip",
-                "Brutal_Doom_64_v2.666/Specific_Sndpack_BD64v2666.1/BD_64_Alt_Rif_Mag _Sprite.pk3",
-                "Brutal_Doom_64_v2.666/Specific_Sndpack_BD64v2666.1/NO_FACKIN_WARAMB.pk3",
-                "Brutal_Doom_64_v2.666/Specific_Sndpack_BD64v2666.1/Specific_Sndpack_BD64v2666.pk3",
+                "Brutal_Doom_64_v2.666/Specific_Sndpack_BD64v2666_Update/Specific_Sndpack_BD64v2666_Update.pk3",
                 "Brutal_Doom_64_v2.666/Optional_Addons/Cran_D64Patch_Props_beta1.pk3",
                 "Brutal_Doom_64_v2.666/Optional_Addons/D64style_Patch_SkygeneratorV3.pk3",
-                "Brutal_Doom_64_v2.666/Optional_Addons/Cran_D64PatchTex_v1.4.pk3"
+                "Brutal_Doom_64_v2.666/Optional_Addons/Cran_D64PatchTex_v1.4.pk3",
+                "Brutal_Doom_64_v2.666/BD64v2.666ENEMIESUPSCALE.zip",
+                "Brutal_Doom_64_v2.666/BD64v2.666UPSCALEWEAPONS.zip"
             ]
         },
         {
             "name": "Brutal Heretic",
-            "version": "6.0",
+            "version": "6.1",
             "rating": 4,
             "url": "https://nzdoom.net/printthread.php?tid=3",
             "iwads": [
@@ -68,7 +113,7 @@
             ],
             "files": [
                 "brutal_heretic/H20MUS.wad",
-                "brutal_heretic/BrutalHereticRPG_V6.0.pk3",
+                "brutal_heretic/BrutalHereticRPG_V6.1.pk3",
                 "brutal_heretic/heretic_gz.pk3",
                 "brutal_heretic/Resurrectupdate.pk3"
             ]
@@ -97,6 +142,7 @@
             "url": "https://www.moddb.com/mods/brutal-wolfenstein-3d",
             "files": [
                 "brutal_wolfenstein_3d/Brutal_Soundpack_Spear_of_Destiny_Edition.pk3",
+                "brutal_wolfenstein_3d/WolfingExtra.pk3",
                 "brutal_wolfenstein_3d/ZMC-BWV7.0.pk3"
             ]
         },
@@ -160,11 +206,11 @@
         },
         {
             "name": "Siren",
-            "version": "0.85",
+            "version": "0.86",
             "rating": 3,
             "url": "https://www.moddb.com/mods/siren-doom-tc",
             "files": [
-                "Siren_v0.85.pk3"
+                "Siren_0.86.pk3"
             ]
         },
         {
@@ -178,8 +224,8 @@
             ]
         },
         {
-            "name": "Venturous",
-            "version": "1.5",
+            "name": "Venturous (still uses 1.5.0)",
+            "version": "1.5.3",
             "rating": 4,
             "url": "https://forum.zdoom.org/viewtopic.php?t=78218",
             "files": [
@@ -203,7 +249,11 @@
         {
             "name": "Hexen HD (STOPPED WORKING - needs Hexen HD update)",
             "rating": 0,
-            "url": "https://www.youtube.com/watch?v=TCQSVGg-dzw",
+            "url": [
+                "https://www.youtube.com/watch?v=TCQSVGg-dzw",
+                "https://www.moddb.com/mods/hexen-hd",
+                ""
+            ],
             "iwads": [
                 "hexen.wad"
             ],
@@ -249,13 +299,13 @@
         },
         {
             "name": "Brutal Doom (Community Expansion)",
-            "version": "21.14.0",
+            "version": "21.15.0",
             "rating": 4,
             "url": "https://github.com/BLOODWOLF333/Brutal-Doom-Community-Expansion",
             "allow_other": true,
             "contains_weapons": true,
             "files": [
-                "brutalv21.14.0.pk3"
+                "brutalv21.15.0.pk3"
             ]
         },
         {
@@ -279,19 +329,18 @@
         },
         {
             "name": "Brutal Voxel Doom",
-            "version": "1.2",
+            "version": "2.0",
             "rating": 5,
             "url": "https://www.moddb.com/mods/brutal-voxel-doom",
             "contains_weapons": true,
             "files": [
-                "BrutalVoxelDoom/cheello_voxels_everything_MAY.pk3",
-                "BrutalVoxelDoom/chelloweaponsmod.pk3"
+                "BrutalVoxelDoom/brutalVoxelDoom2.0Complete.pk3"
             ],
             "config": "BrutalVoxelDoom/BrutalVoxelDoom.ini"
         },
         {
             "name": "Bullet Time X",
-            "version": "1.2.0",
+            "version": "1.3.1",
             "rating": 5,
             "url": "https://www.moddb.com/games/doom-ii/addons/bullet-time-x",
             "files": [
@@ -300,11 +349,11 @@
         },
         {
             "name": "Cody Cruikshank's Project Brutality",
-            "version": "25",
+            "version": "29",
             "rating": 4,
             "url": "https://www.moddb.com/mods/cody-cruikshanks-project-brutality1",
             "files": [
-                "Cody_Cruikshanks_Project_brutality_25.pk3"
+                "Cody_Cruikshanks_Project_brutality_29.pk3"
             ]
         },
         {
@@ -402,31 +451,33 @@
         },
         {
             "name": "Project Brutality",
-            "version": "March 9th 2024",
+            "version": "Aug 3, 2024",
             "rating": 5,
             "url": "https://github.com/pa1nki113r/Project_Brutality/tree/popguy12-PB%26J",
             "contains_weapons": true,
             "files": [
-                "Project_Brutality-popguy12-PB-J.zip"
+                "Project_Brutality-PB_Staging.zip"
             ]
         },
         {
-            "name": "Relite + Morelights",
-            "version": "0.6.7a",
+            "name": "Relite + Morelights + Rain Remixed",
+            "version": "0.6.9a",
             "rating": 4,
             "url": [
                 "https://www.moddb.com/mods/relite",
-                "https://forum.zdoom.org/viewtopic.php?t=72206"
+                "https://forum.zdoom.org/viewtopic.php?t=72206",
+                "https://www.moddb.com/mods/rain-remixed"
             ],
             "contains_weapons": false,
             "files": [
-                "relite_0.6.7a.pk3",
-                "morelights2.5_base.pk3"
+                "relite_0.6.9a.pk3",
+                "morelights2.5_base.pk3",
+                "Rain_Remixed++_1.7a.wad"
             ]
         },
         {
             "name": "T-64: Ultimate Pack",
-            "version": "5.3 (from 2024.03)",
+            "version": "5.4 (from 2024.06)",
             "rating": 4,
             "url": [
                 "https://www.moddb.com/mods/t-64-u-l-t-i-m-a-t-e-p-a-c-k"
@@ -454,23 +505,28 @@
         },
         {
             "name": "Voxel Doom II (for Doom 1 & 2)",
-            "version": "2.3",
+            "version": "2.4",
             "rating": 4,
             "url": "https://www.moddb.com/mods/voxel-doom-ii",
             "contains_weapons": true,
             "files": [
-                "VoxelDoom_v_2.3.pk3"
+                "VoxelDoom_v2.4.pk3"
             ]
         },
         {
             "name": "Wolf3Doom",
-            "version": "2.0",
+            "version": "2.1",
             "rating": 4,
-            "url": "https://www.moddb.com/mods/wolf3doom",
+            "url": [
+                "https://www.moddb.com/mods/wolf3doom",
+                "https://www.moddb.com/mods/brutal-doom/addons/smooth-bolognese-gore-merge"
+            ],
             "contains_weapons": true,
             "files": [
-                "wolf3doom/Wolf3DoomV2_0.pk3",
-                "wolf3doom/sm4BBgorev3.pk3"
+                "wolf3doom/Wolf3Doom_MLE_v2.1.pk3",
+                "wolf3doom/dD-Bolognese-No-MW.pk3",
+                "wolf3doom/dD-Nashgore-No-MW.pk3",
+                "wolf3doom/dD-SmoothDoom-No-MW.pk3"
             ]
         },
         {
@@ -500,11 +556,11 @@
         },
         {
             "name": "Xim's Star Wars",
-            "version": "3.1.4",
+            "version": "3.1.5",
             "rating": 5,
             "url": "https://www.moddb.com/mods/xims-star-wars-doom",
             "files": [
-                "Xim-StarWars/Xim-StarWars-v3.1.4.pk3",
+                "Xim-StarWars/Xim-StarWars-v3.1.5.pk3",
                 "Xim-StarWars/Xim-StarWarsProps.pk3",
                 "Xim-StarWars/AddOns/Xim-DarkForcesHUD.pk3",
                 "Xim-StarWars/Xim-StarWarsTextures-v2.2.pk3",
@@ -532,6 +588,17 @@
                 "CODBW_v2Z/ZZD_CODBW_FileA_BrutalDoom.pk3",
                 "CODBW_v2Z/ZZD_CODBW_FileB_HDgraphics.wad",
                 "CODBW_v2Z/ZZD_CODBW_FileC_MainData.wad"
+            ]
+        },
+        {
+            "name": "Call Of Doom: Tarkov (BD Version)",
+            "version": "1.0.3b",
+            "rating": 5,
+            "url": "https://www.moddb.com/mods/call-of-doom-cod-style-advanced-weapons-mod",
+            "files": [
+                "CallofDoomTARKOV/CodTarkov_FileA_BrutalDOOMver.pk3",
+                "CallofDoomTARKOV/ZZD_CodTarkov_FileB_Graphics.wad",
+                "CallofDoomTARKOV/ZZD_CodTarkov_FileC_MainData.wad"
             ]
         }
     ],
@@ -602,13 +669,13 @@
         },
         {
             "name": "Dragon Sector Remake",
-            "version": "0.65",
+            "version": "0.70b",
             "rating": 0,
             "url": "https://www.moddb.com/mods/dragon-sector-the-remake",
             "files": [
-                "Project_Brutality-popguy12-PB-J.zip",
+                "Project_Brutality-PB_Staging.zip",
                 "dragon-sector-remake/KAI-main.pk3",
-                "dragon-sector-remake/dragon-sector-remake-v0.65.pk3"
+                "dragon-sector-remake/dragon-sector-remake-v0.70b.pk3"
             ]
         },
         {
@@ -736,6 +803,15 @@
             "url": "https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/valve",
             "files": [
                 "valve.wad"
+            ]
+        },
+        {
+            "name": "ZPack Rejuvenated",
+            "version": "2",
+            "rating": 0,
+            "url": "https://www.moddb.com/mods/zpack-rejuvenated-random-maps-for-zdoom",
+            "files": [
+                "maps/zpack.pk3"
             ]
         }
     ],

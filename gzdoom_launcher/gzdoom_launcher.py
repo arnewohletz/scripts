@@ -1,8 +1,9 @@
 import json
 import os
+import subprocess
 
 
-ROOT_DIR = "~/Library/Application\\ Support/gzdoom/"
+ADDON_ROOT_DIR = "~/Library/Application\\ Support/gzdoom/"
 
 
 class Launcher:
@@ -11,6 +12,7 @@ class Launcher:
 
         with open(os.path.dirname(__file__) + "/addons.json", "r") as file:
             (
+                self.gzdoom_versions,
                 self.total_conversions,
                 self.predefined_combinations,
                 self.gameplay_mods,
@@ -23,18 +25,30 @@ class Launcher:
         self.allowed_map_packs = self.map_packs
         self.contains_weapons = False
         self.iwad_defined = False
-        self.command = "/Applications/GZDoom.app/Contents/MacOS/gzdoom"
+
         print("Welcome to GZDoom Launcher!")
+
+        self.select_gzdoom_version(self.gzdoom_versions)
+        self.select_addon(self.total_conversions, True)
+        self.select_addon(self.predefined_combinations, True)
+        self.select_addon(self.gameplay_mods, False)
+        while self.allows_more_current_type:
+            self.select_addon(self.gameplay_mods, False)
+        if not self.contains_weapons:
+            self.select_addon(self.weapon_packs, False)
+        self.select_addon(self.allowed_map_packs, True)
 
     def json_to_addon_objects(self, json_data):
         return (
+            [GZDoomVersion(**data)
+                for data in json_data["gzdoom_version"]],
             [TotalConversion(**data)
                 for data in json_data["total_conversion"]],
             [PredefinedCombination(**data)
                 for data in json_data["predefined_combination"]],
             [Gameplay(**data)
                 for data in json_data["gameplay_mod"]],
-            [ WeaponPack(**data)
+            [WeaponPack(**data)
                 for data in json_data["weapon_pack"]],
             [MapPack(**data) 
                 for data in json_data["map_pack"]],
@@ -43,6 +57,30 @@ class Launcher:
             [XimStarWarsMapPack(**data)
                 for data in json_data["xim_star_wars_map_pack"]]
         )
+
+    def select_gzdoom_version(self, gzdoom_versions_tuple):
+        get_default_version_cmd = [
+            "defaults", "read",
+            "/Applications/GZDoom.app/Contents/Info.plist",
+            "CFBundleShortVersionString"
+        ]
+        raw_default_version = subprocess.check_output(get_default_version_cmd)
+        default_version = raw_default_version.decode(
+            "utf-8").strip("\n").replace("g", "")
+        for i, version in enumerate(gzdoom_versions_tuple):
+            print(f"{' '*(3 - len(str(i)))}[{i}] {version.name}", end=" ")
+            if version.name == "default":
+                print(f"({default_version})")
+            else:
+                print("")
+        gzdoom_version_index = input(
+            f"Select a {gzdoom_versions_tuple[0].type} (default, if empty): "
+        )
+        if gzdoom_version_index:
+            gzdoom_version = gzdoom_versions_tuple[int(gzdoom_version_index)]
+            self.command = gzdoom_version.path
+        else:
+            self.command = "/Applications/GZDoom.app/Contents/MacOS/gzdoom"
 
     def select_addon(self, addon_tuple, last_input=False):
         print_addons(addon_tuple)
@@ -56,11 +94,11 @@ class Launcher:
             self.contains_weapons = addon.contains_weapons
             if hasattr(addon, "iwads") and not self.iwad_defined:
                 for iwad in addon.iwads:
-                    self.command += f" -iwad {ROOT_DIR + iwad}"
+                    self.command += f" -iwad {ADDON_ROOT_DIR + iwad}"
                 self.iwad_defined = True
             if hasattr(addon, "files"):
                 for file in addon.files:
-                    self.command += f" -file {ROOT_DIR + file}"
+                    self.command += f" -file {ADDON_ROOT_DIR + file}"
             if hasattr(addon, "allowed_map_packs"):
                 print(addon.allowed_map_packs)
                 with open(os.path.dirname(__file__)
@@ -72,7 +110,7 @@ class Launcher:
                         self.allowed_map_packs = self.xim_star_wars_map_pack
             if last_input:
                 if not self.iwad_defined:
-                    self.command += f" -iwad {ROOT_DIR}doom2.wad"
+                    self.command += f" -iwad {ADDON_ROOT_DIR}doom2.wad"
                 self.launch()
                 print("Exiting ...")
                 exit(0)
@@ -93,6 +131,13 @@ def print_addons(addons_tuple) -> None:
             print(f"{' '*(3 - len(str(i)))}[{i}] {addon.name} "
                   f"{addon.rating * '\N{LARGE GREEN CIRCLE}'}"
                   f"{(5 - addon.rating) * '\N{LARGE RED CIRCLE}'}")
+
+
+class GZDoomVersion(object):
+
+    def __init__(self, **kwargs):
+        self.__dict__.update(kwargs)
+        self.type = "GZDoom version"
 
 
 class Addon(object):
@@ -170,11 +215,3 @@ class XimStarWarsMapPack(MapPack):
 if __name__ == "__main__":
 
     launcher = Launcher()
-    launcher.select_addon(launcher.total_conversions, True)
-    launcher.select_addon(launcher.predefined_combinations, True)
-    launcher.select_addon(launcher.gameplay_mods, False)
-    while launcher.allows_more_current_type:
-        launcher.select_addon(launcher.gameplay_mods, False)
-    if not launcher.contains_weapons:
-        launcher.select_addon(launcher.weapon_packs, False)
-    launcher.select_addon(launcher.allowed_map_packs, True)
