@@ -11,6 +11,22 @@
     ],
     "total_conversion": [
         {
+            "name": "Alien: Romulus",
+            "version": "2.0",
+            "rating": 0,
+            "url": "https://nzdoom.net/showthread.php?tid=92",
+            "files": [
+                "alien_romulus/1_Alien_Romulus_2.0.pk3",
+                "alien_romulus/2_X-DHTP_Alterations.pk3",
+                "alien_romulus/3_LV-410.wad",
+                "alien_romulus/4_Romulus_music.pk3",
+                "alien_romulus/5_darkdoomz_v1.7.1.pk3"
+            ],
+            "iwads": [
+                "DOOM.wad"
+            ]
+        },
+        {
             "name": "Ashes Episode 1 - 2063",
             "version": "2.23",
             "rating": 5,
@@ -25,12 +41,12 @@
         },
         {
             "name": "Ashes Episode 2 Prequel - Hard Reset",
-            "version": "1.00a",
+            "version": "1.05",
             "rating": 5,
             "url": "https://www.moddb.com/mods/ashes-2063",
             "files": [
                 "ashes/AshesSAMenu.pk3",
-                "ashes/AshesHardReset_1_00a.pk3",
+                "ashes/AshesHardReset_105.pk3",
                 "ashes/AshesAfterGlow_NeuralPack.pk3"
             ]
         },
@@ -60,7 +76,7 @@
         },
         {
             "name": "Blade Of Agony (master) - requires GZDoom 4.12+",
-            "version": "Aug 5, 2024",
+            "version": "Oct 3rd, 2024",
             "rating": 5,
             "url": [
                 "https://github.com/Realm667/WolfenDoom"
@@ -68,19 +84,23 @@
             "iwads": [
                 "WolfenDoom-master.zip"
             ],
-            "files": []
+            "files": [
+                "boa_gz4.12.2_fix.pk3"
+            ]
         },
         {
-            "name": "Blade Of Agony - requires GZDoom 4.11",
+            "name": "Blade Of Agony",
             "version": "3.1",
             "rating": 5,
             "url": [
-                "https://github.com/Realm667/WolfenDoom"
+                "https://www.moddb.com/mods/wolfendoom-blade-of-agony"
             ],
             "iwads": [
                 "boa.ipk3"
             ],
-            "files": []
+            "files": [
+                "boa_gz4.12.2_fix.pk3"
+            ]
         },
         {
             "name": "Brutal Doom 64 v2.666",
@@ -148,23 +168,23 @@
         },
         {
             "name": "Doom 64 CE",
-            "version": "3.9.1",
+            "version": "3.10.2",
             "rating": 5,
             "url": "https://www.moddb.com/mods/doom-ce",
             "files": [
-                "DOOM64.CE-3.9.1/DOOM64.CE.ipk3",
-                "DOOM64.CE-3.9.1/DOOM64.CE.Maps.LostLevels.pk3",
-                "DOOM64.CE-3.9.1/DOOM64.CE.Addon.BGM.Extended.pk3",
-                "DOOM64.CE-3.9.1/DOOM64.CE.Addon.GFX.Brightmaps.pk3",
-                "DOOM64.CE-3.9.1/DOOM64.CE.Addon.GFX.Decals.pk3",
-                "DOOM64.CE-3.9.1/DOOM64.CE.Addon.GFX.Extra.pk3",
-                "DOOM64.CE-3.9.1/DOOM64.CE.Addon.GFX.Parallax.pk3",
-                "DOOM64.CE-3.9.1/DOOM64.CE.Addon.GFX.PBR.pk3",
-                "DOOM64.CE-3.9.1/DOOM64.CE.Addon.GFX.Upscale.pk3",
-                "DOOM64.CE-3.9.1/DOOM64.CE.Addon.SFX.HQ.pk3"
+                "DOOM64.CE-3.10.2/DOOM64.CE.ipk3",
+                "DOOM64.CE-3.10.2/DOOM64.CE.Maps.LostLevels.pk3",
+                "DOOM64.CE-3.10.2/DOOM64.CE.Addon.BGM.Extended.pk3",
+                "DOOM64.CE-3.10.2/DOOM64.CE.Addon.GFX.Brightmaps.pk3",
+                "DOOM64.CE-3.10.2/DOOM64.CE.Addon.GFX.Decals.pk3",
+                "DOOM64.CE-3.10.2/DOOM64.CE.Addon.GFX.Extra.pk3",
+                "DOOM64.CE-3.10.2/DOOM64.CE.Addon.GFX.Parallax.pk3",
+                "DOOM64.CE-3.10.2/DOOM64.CE.Addon.GFX.PBR.pk3",
+                "DOOM64.CE-3.10.2/DOOM64.CE.Addon.GFX.Upscale.pk3",
+                "DOOM64.CE-3.10.2/DOOM64.CE.Addon.SFX.HQ.pk3"
             ],
             "iwads": [
-                "DOOM64.CE-3.9.1/DOOM64.IWAD"
+                "DOOM64.CE-3.10.2/DOOM64.IWAD"
             ]
         },
         {
@@ -225,7 +245,7 @@
         },
         {
             "name": "Venturous (still uses 1.5.0)",
-            "version": "1.5.3",
+            "version": "1.5.4",
             "rating": 4,
             "url": "https://forum.zdoom.org/viewtopic.php?t=78218",
             "files": [
@@ -270,29 +290,30 @@
     ],
     "gameplay_mod": [
         {
-            "name": "Atom Rain: X Protocol + Hell From Earth",
-            "version": "1.2Hotfix",
+            "name": "Atom Rain: Gamma Vektor + Hell From Earth",
+            "version": "2.0 + 1.2Hotfix",
             "rating": 4,
             "url": [
                 "https://www.moddb.com/mods/atom-rain-x-protocol",
+                "https://www.moddb.com/mods/atom-rain-gamma-vektor",
                 "https://www.moddb.com/mods/hell-from-earth"
             ],
             "allow_other": false,
             "contains_weapons": true,
             "files": [
-                "MACE-ARXP_V1.1A.pk3",
+                "MACE-ARGV_V2X.pk3",
                 "HFE_V1.2Hotfix.pk3"
             ]
         },
         {
             "name": "Brutal Doom",
-            "version": "22 Beta Test 3",
+            "version": "22 Beta Test 4",
             "rating": 4,
             "url": "https://www.moddb.com/mods/brutal-doom",
             "allow_other": true,
             "contains_weapons": true,
             "files": [
-                "brutalv22/brutalv22test3.pk3",
+                "brutalv22/brutalv22test4.pk3",
                 "brutalv22/BDv22TestUpscale2x.pk3",
                 "brutalv22/BDv22EnemiesUpscale2x.pk3"
             ]
@@ -451,7 +472,7 @@
         },
         {
             "name": "Project Brutality",
-            "version": "Aug 3, 2024",
+            "version": "Oct 4, 2024",
             "rating": 5,
             "url": "https://github.com/pa1nki113r/Project_Brutality/tree/popguy12-PB%26J",
             "contains_weapons": true,
@@ -461,7 +482,7 @@
         },
         {
             "name": "Relite + Morelights + Rain Remixed",
-            "version": "0.6.9a",
+            "version": "0.7.3b",
             "rating": 4,
             "url": [
                 "https://www.moddb.com/mods/relite",
@@ -470,9 +491,9 @@
             ],
             "contains_weapons": false,
             "files": [
-                "relite_0.6.9a.pk3",
+                "relite_0.7.3b.pk3",
                 "morelights2.5_base.pk3",
-                "Rain_Remixed++_1.7a.wad"
+                "Rain_Remixed++_1.7v.wad"
             ]
         },
         {
@@ -526,7 +547,7 @@
                 "wolf3doom/Wolf3Doom_MLE_v2.1.pk3",
                 "wolf3doom/dD-Bolognese-No-MW.pk3",
                 "wolf3doom/dD-Nashgore-No-MW.pk3",
-                "wolf3doom/dD-SmoothDoom-No-MW.pk3"
+                "wolf3doom/Wolf3D_MUSICv1_1.pk3"
             ]
         },
         {
@@ -592,13 +613,14 @@
         },
         {
             "name": "Call Of Doom: Tarkov (BD Version)",
-            "version": "1.0.3b",
+            "version": "1.0.4",
             "rating": 5,
             "url": "https://www.moddb.com/mods/call-of-doom-cod-style-advanced-weapons-mod",
             "files": [
                 "CallofDoomTARKOV/CodTarkov_FileA_BrutalDOOMver.pk3",
                 "CallofDoomTARKOV/ZZD_CodTarkov_FileB_Graphics.wad",
-                "CallofDoomTARKOV/ZZD_CodTarkov_FileC_MainData.wad"
+                "CallofDoomTARKOV/ZZD_CodTarkov_FileC_MainData.wad",
+                "CallofDoomTARKOV/gearbox-v0.7.2.pk3"
             ]
         }
     ],
@@ -658,6 +680,15 @@
             ]
         },
         {
+            "name": "Doom III (wait for maps-only version)",
+            "version": "1.0b",
+            "rating": 0,
+            "url": "https://www.moddb.com/mods/doom-3-doom-ii-mod",
+            "files": [
+                "D3.pk3"
+            ]
+        },
+        {
             "name": "Doom Slayer Chronicles (NOT WORKING, WAIT FOR NEXT RELEASE)",
             "version": "1.0.2",
             "rating": 0,
@@ -669,13 +700,13 @@
         },
         {
             "name": "Dragon Sector Remake",
-            "version": "0.70b",
+            "version": "0.71",
             "rating": 0,
             "url": "https://www.moddb.com/mods/dragon-sector-the-remake",
             "files": [
                 "Project_Brutality-PB_Staging.zip",
                 "dragon-sector-remake/KAI-main.pk3",
-                "dragon-sector-remake/dragon-sector-remake-v0.70b.pk3"
+                "dragon-sector-remake/dragon-sector-remake-v0.71.pk3"
             ]
         },
         {
@@ -698,11 +729,11 @@
         },
         {
             "name": "Eviternity 2",
-            "version": "RC5",
+            "version": "Final",
             "rating": 0,
             "url": "https://eviternity.dfdoom.com/",
             "files": [
-                "Eviternity_II_RC5.wad"
+                "Eviternity_II.wad"
             ]
         },
         {
