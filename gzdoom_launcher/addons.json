@@ -12,7 +12,7 @@
     "total_conversion": [
         {
             "name": "Alien: Romulus",
-            "version": "2.0",
+            "version": "2.1",
             "rating": 0,
             "url": "https://nzdoom.net/showthread.php?tid=92",
             "files": [
@@ -157,13 +157,13 @@
         },
         {
             "name": "Brutal Wolfenstein 3D",
-            "version": "7.0",
+            "version": "7.1",
             "rating": 5,
             "url": "https://www.moddb.com/mods/brutal-wolfenstein-3d",
             "files": [
                 "brutal_wolfenstein_3d/Brutal_Soundpack_Spear_of_Destiny_Edition.pk3",
                 "brutal_wolfenstein_3d/WolfingExtra.pk3",
-                "brutal_wolfenstein_3d/ZMC-BWV7.0.pk3"
+                "brutal_wolfenstein_3d/ZMC-BWV7.1.pk3"
             ]
         },
         {
@@ -225,6 +225,17 @@
             ]
         },
         {
+            "name": "QC: Doom Edition (may not work on GZDoom)",
+            "version": "3.0",
+            "rating": 0,
+            "url": "https://www.moddb.com/mods/quake-champions-doom-edition",
+            "files": [
+                "QCDE_v3.0/QCDEv3.0.pk3",
+                "QCDE_v3.0/QCDEmaps3.0.pk3",
+                "QCDE_v3.0/QCDEmus3.0.pk3"
+            ]
+        },
+        {
             "name": "Siren",
             "version": "0.86",
             "rating": 3,
@@ -245,11 +256,11 @@
         },
         {
             "name": "Venturous (still uses 1.5.0)",
-            "version": "1.5.4",
+            "version": "1.6.0",
             "rating": 4,
             "url": "https://forum.zdoom.org/viewtopic.php?t=78218",
             "files": [
-                "Venturous_1.5.pk3",
+                "Venturous_1.6.pk3",
                 "gearbox-v0.7.2.pk3",
                 "wolf3doom/sm4BBgorev3.pk3"
             ]
@@ -370,11 +381,11 @@
         },
         {
             "name": "Cody Cruikshank's Project Brutality",
-            "version": "29",
+            "version": "30",
             "rating": 4,
             "url": "https://www.moddb.com/mods/cody-cruikshanks-project-brutality1",
             "files": [
-                "Cody_Cruikshanks_Project_brutality_29.pk3"
+                "Cody_Cruikshanks_Project_brutality_30.pk3"
             ]
         },
         {
@@ -474,10 +485,11 @@
             "name": "Project Brutality",
             "version": "Oct 4, 2024",
             "rating": 5,
-            "url": "https://github.com/pa1nki113r/Project_Brutality/tree/popguy12-PB%26J",
+            "url": "https://github.com/pa1nki113r/Project_Brutality/tree/PB_Staging",
             "contains_weapons": true,
             "files": [
-                "Project_Brutality-PB_Staging.zip"
+                "Project_Brutality-PB_Staging.zip",
+                "Project_Brutality-Alpha 0.2.0_4.13.2_Fix.pk3"
             ]
         },
         {
@@ -493,7 +505,7 @@
             "files": [
                 "relite_0.7.3b.pk3",
                 "morelights2.5_base.pk3",
-                "Rain_Remixed++_1.7v.wad"
+                "Rain_Remixed++_1.8b.wad"
             ]
         },
         {
@@ -613,7 +625,7 @@
         },
         {
             "name": "Call Of Doom: Tarkov (BD Version)",
-            "version": "1.0.4",
+            "version": "1.2",
             "rating": 5,
             "url": "https://www.moddb.com/mods/call-of-doom-cod-style-advanced-weapons-mod",
             "files": [
@@ -681,7 +693,7 @@
         },
         {
             "name": "Doom III (wait for maps-only version)",
-            "version": "1.0b",
+            "version": "1.0c",
             "rating": 0,
             "url": "https://www.moddb.com/mods/doom-3-doom-ii-mod",
             "files": [
