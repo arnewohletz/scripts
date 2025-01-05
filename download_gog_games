@@ -1,7 +1,14 @@
 #! /bin/zsh
 
-source ~/.pyenv/versions/gog_repo/bin/activate
+# source ~/.pyenv/versions/gog_repo/bin/activate
+source ~/.pyenv/versions/gog_repo_py312/bin/activate
 
+### had to switch to https://github.com/Kalanyr/gogrepoc due to below error
 cd ~/Documents/gogrepo-master/
-python gogrepo.py update -os windows linux mac -l en
-python gogrepo.py download /Volumes/GOG_GAMES
+python gogrepoc.py update -os windows linux mac -lang en -skiphidden -full
+python gogrepoc.py download /Volumes/GOG_GAMES
+
+### gogrepo.py currently cannot login (https://github.com/eddie3/gogrepo/issues/75)
+
+# python gogrepo.py update -os windows linux mac -l en
+# python gogrepo.py download /Volumes/GOG_GAMES
