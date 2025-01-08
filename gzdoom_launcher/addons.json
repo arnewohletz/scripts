@@ -5,6 +5,10 @@
             "path": "/Applications/GZDoom.app/Contents/MacOS/gzdoom"
         },
         {
+            "name": "4.13",
+            "path": "/Applications/GZDoom_4.13.app/Contents/MacOS/gzdoom"
+        },
+        {
             "name": "4.11",
             "path": "/Applications/GZDoom_4.11.app/Contents/MacOS/gzdoom"
         }

@@ -11,10 +11,10 @@ if [ ! -d "$log_dir" ]; then
 fi
 
 touch "$log_file"
-/usr/local/bin/brew upgrade >"$log_file" 2>&1
+/opt/homebrew/bin/brew upgrade >"$log_file" 2>&1
 
-msg=$(/usr/local/bin/pcregrep -o1 -o2 --om-separator=' ' "$update_version_regex" "$log_file")
+msg=$(/opt/homebrew/bin/pcregrep -o1 -o2 --om-separator=' ' "$update_version_regex" "$log_file")
 
 if [[ -n $msg ]]; then
-  /usr/local/bin/noti -t "Package(s) updated" -m "$msg"
+  /opt/homebrew/bin/noti -t "Package(s) updated" -m "$msg"
 fi

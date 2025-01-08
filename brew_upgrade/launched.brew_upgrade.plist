@@ -8,7 +8,7 @@
 		<array>
 			<string>/bin/zsh</string>
 			<string>-c</string>
-			<string>/Users/arnewohletz/MyDevelopmentProjects/scripts/shell/brew_upgrade.sh</string>
+			<string>/Users/arnewohletz/MyDevProjects/scripts/shell/brew_upgrade.sh</string>
 		</array>
 		<key>StartInterval</key>
 		<integer>3600</integer>
